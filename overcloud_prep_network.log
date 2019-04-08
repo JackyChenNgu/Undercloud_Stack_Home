@@ -1,0 +1,61 @@
+2019-04-08 06:23:45 | + source /home/stack/stackrc
+2019-04-08 06:23:45 | +++ set
+2019-04-08 06:23:45 | +++ awk -F= '/^OS_/ {print $1}'
+2019-04-08 06:23:45 | ++ export OS_AUTH_TYPE=password
+2019-04-08 06:23:45 | ++ OS_AUTH_TYPE=password
+2019-04-08 06:23:45 | ++ export OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:23:45 | ++ OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:23:45 | ++ export OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:23:45 | ++ OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:23:45 | ++ export OS_USERNAME=admin
+2019-04-08 06:23:45 | ++ OS_USERNAME=admin
+2019-04-08 06:23:45 | ++ export OS_PROJECT_NAME=admin
+2019-04-08 06:23:45 | ++ OS_PROJECT_NAME=admin
+2019-04-08 06:23:45 | ++ export COMPUTE_API_VERSION=1.1
+2019-04-08 06:23:45 | ++ COMPUTE_API_VERSION=1.1
+2019-04-08 06:23:45 | ++ export NOVA_VERSION=1.1
+2019-04-08 06:23:45 | ++ NOVA_VERSION=1.1
+2019-04-08 06:23:45 | ++ export OS_NO_CACHE=True
+2019-04-08 06:23:45 | ++ OS_NO_CACHE=True
+2019-04-08 06:23:45 | ++ export OS_CLOUDNAME=undercloud
+2019-04-08 06:23:45 | ++ OS_CLOUDNAME=undercloud
+2019-04-08 06:23:45 | ++ export OS_IDENTITY_API_VERSION=3
+2019-04-08 06:23:45 | ++ OS_IDENTITY_API_VERSION=3
+2019-04-08 06:23:45 | ++ export OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:23:45 | ++ OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:23:45 | ++ export OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:23:45 | ++ OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:23:45 | ++ export OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:23:45 | ++ OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:23:45 | ++ '[' -z '' ']'
+2019-04-08 06:23:45 | ++ export PS1=
+2019-04-08 06:23:45 | ++ PS1=
+2019-04-08 06:23:45 | ++ export 'PS1=${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:23:45 | ++ PS1='${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:23:45 | ++ export CLOUDPROMPT_ENABLED=1
+2019-04-08 06:23:45 | ++ CLOUDPROMPT_ENABLED=1
+2019-04-08 06:23:45 | + FENCING_RULE='-m udp -p udp -m multiport --dports 6230,6231 -m state --state NEW'
+2019-04-08 06:23:45 | + COMMENT=fencing_access_from_overcloud
+2019-04-08 06:23:45 | + sudo iptables -nvL INPUT
+2019-04-08 06:23:45 | + grep fencing_access_from_overcloud
+2019-04-08 06:23:45 | + sudo iptables -I INPUT 1 -m udp -p udp -m multiport --dports 6230,6231 -m state --state NEW -m comment --comment fencing_access_from_overcloud -j ACCEPT
+2019-04-08 06:23:45 | + sudo sh -c 'iptables-save > /etc/sysconfig/iptables'
+2019-04-08 06:23:45 | + sudo bash -c 'cat <<EOF > /etc/sysconfig/network-scripts/ifcfg-vlan10
+2019-04-08 06:23:45 | DEVICE=vlan10
+2019-04-08 06:23:45 | ONBOOT=yes
+2019-04-08 06:23:45 | DEVICETYPE=ovs
+2019-04-08 06:23:45 | TYPE=OVSIntPort
+2019-04-08 06:23:45 | BOOTPROTO=static
+2019-04-08 06:23:45 | IPADDR=10.0.0.1
+2019-04-08 06:23:45 | NETMASK=255.255.255.0
+2019-04-08 06:23:45 | OVS_BRIDGE=br-ctlplane
+2019-04-08 06:23:45 | OVS_OPTIONS="tag=10"
+2019-04-08 06:23:45 | EOF'
+2019-04-08 06:23:45 | + sudo ifup ifcfg-vlan10
+2019-04-08 06:23:50 | ++ neutron net-list
+2019-04-08 06:23:50 | ++ awk '/ctlplane/{print $(NF-2) }'
+2019-04-08 06:23:50 | neutron CLI is deprecated and will be removed in the future. Use openstack CLI instead.
+2019-04-08 06:23:52 | ++ awk 'match($0, /nameserver\s+(([0-9]{1,3}.?){4})/,address){printf " --dns-nameserver %s", address[1]}' /etc/resolv.conf
+2019-04-08 06:23:52 | + neutron subnet-update 8cf975d8-f482-4ae5-b6e6-1a1f0b9b73d7 --dns-nameserver 192.168.23.1
+2019-04-08 06:23:53 | neutron CLI is deprecated and will be removed in the future. Use openstack CLI instead.
+2019-04-08 06:23:55 | Updated subnet: 8cf975d8-f482-4ae5-b6e6-1a1f0b9b73d7

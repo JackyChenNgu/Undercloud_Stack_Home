@@ -1,0 +1,2811 @@
+[DEFAULT]
+
+#
+# From oslo.log
+#
+
+# If set to true, the logging level will be set to DEBUG instead of
+# the default INFO level. (boolean value)
+# Note: This option can be changed without restarting.
+#debug = false
+
+# The name of a logging configuration file. This file is appended to
+# any existing logging configuration files. For details about logging
+# configuration files, see the Python logging module documentation.
+# Note that when logging configuration files are used then all logging
+# configuration is set in the configuration file and other logging
+# configuration options are ignored (for example,
+# logging_context_format_string). (string value)
+# Note: This option can be changed without restarting.
+# Deprecated group/name - [DEFAULT]/log_config
+#log_config_append = <None>
+
+# Defines the format string for %%(asctime)s in log records. Default:
+# %(default)s . This option is ignored if log_config_append is set.
+# (string value)
+#log_date_format = %Y-%m-%d %H:%M:%S
+
+# (Optional) Name of log file to send logging output to. If no default
+# is set, logging will go to stderr as defined by use_stderr. This
+# option is ignored if log_config_append is set. (string value)
+# Deprecated group/name - [DEFAULT]/logfile
+#log_file = tempest.log
+
+# (Optional) The base directory used for relative log_file  paths.
+# This option is ignored if log_config_append is set. (string value)
+# Deprecated group/name - [DEFAULT]/logdir
+#log_dir = <None>
+
+# Uses logging handler designed to watch file system. When log file is
+# moved or removed this handler will open a new log file with
+# specified path instantaneously. It makes sense only if log_file
+# option is specified and Linux platform is used. This option is
+# ignored if log_config_append is set. (boolean value)
+#watch_log_file = false
+
+# Use syslog for logging. Existing syslog format is DEPRECATED and
+# will be changed later to honor RFC5424. This option is ignored if
+# log_config_append is set. (boolean value)
+#use_syslog = false
+
+# Enable journald for logging. If running in a systemd environment you
+# may wish to enable journal support. Doing so will use the journal
+# native protocol which includes structured metadata in addition to
+# log messages.This option is ignored if log_config_append is set.
+# (boolean value)
+#use_journal = false
+
+# Syslog facility to receive log lines. This option is ignored if
+# log_config_append is set. (string value)
+#syslog_log_facility = LOG_USER
+
+# Use JSON formatting for logging. This option is ignored if
+# log_config_append is set. (boolean value)
+#use_json = false
+
+# Log output to standard error. This option is ignored if
+# log_config_append is set. (boolean value)
+#use_stderr = false
+
+# Format string to use for log messages with context. (string value)
+#logging_context_format_string = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s
+
+# Format string to use for log messages when context is undefined.
+# (string value)
+#logging_default_format_string = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s
+
+# Additional data to append to log message when logging level for the
+# message is DEBUG. (string value)
+#logging_debug_format_suffix = %(funcName)s %(pathname)s:%(lineno)d
+
+# Prefix each line of exception output with this format. (string
+# value)
+#logging_exception_prefix = %(asctime)s.%(msecs)03d %(process)d ERROR %(name)s %(instance)s
+
+# Defines the format string for %(user_identity)s that is used in
+# logging_context_format_string. (string value)
+#logging_user_identity_format = %(user)s %(tenant)s %(domain)s %(user_domain)s %(project_domain)s
+
+# List of package logging levels in logger=LEVEL pairs. This option is
+# ignored if log_config_append is set. (list value)
+#default_log_levels = amqp=WARN,amqplib=WARN,boto=WARN,qpid=WARN,sqlalchemy=WARN,suds=INFO,oslo.messaging=INFO,oslo_messaging=INFO,iso8601=WARN,requests.packages.urllib3.connectionpool=WARN,urllib3.connectionpool=WARN,websocket=WARN,requests.packages.urllib3.util.retry=WARN,urllib3.util.retry=WARN,keystonemiddleware=WARN,routes.middleware=WARN,stevedore=WARN,taskflow=WARN,keystoneauth=WARN,oslo.cache=INFO,dogpile.core.dogpile=INFO
+
+# Enables or disables publication of error events. (boolean value)
+#publish_errors = false
+
+# The format for an instance that is passed with the log message.
+# (string value)
+#instance_format = "[instance: %(uuid)s] "
+
+# The format for an instance UUID that is passed with the log message.
+# (string value)
+#instance_uuid_format = "[instance: %(uuid)s] "
+
+# Interval, number of seconds, of log rate limiting. (integer value)
+#rate_limit_interval = 0
+
+# Maximum number of logged messages per rate_limit_interval. (integer
+# value)
+#rate_limit_burst = 0
+
+# Log level name used by rate limiting: CRITICAL, ERROR, INFO,
+# WARNING, DEBUG or empty string. Logs with level greater or equal to
+# rate_limit_except_level are not filtered. An empty string means that
+# all levels are filtered. (string value)
+#rate_limit_except_level = CRITICAL
+
+# Enables or disables fatal status of deprecations. (boolean value)
+#fatal_deprecations = false
+
+#
+# From tempest.config
+#
+
+# Whether to pause a test in global teardown.
+#
+# The best use case is investigating used resources of one test.
+# A test can be run as follows:
+#  $ ostestr --pdb TEST_ID
+# or
+#  $ python -m testtools.run TEST_ID (boolean value)
+#pause_teardown = false
+
+
+[alarming_plugin]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Alarming service. (string value)
+#catalog_type = alarming
+
+# The endpoint type to use for the alarming service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+
+[application_catalog]
+
+#
+# From tempest.config
+#
+
+# The application_catalog region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# Image for linux services (string value)
+#linux_image = debian-8-m-agent.qcow2
+
+# Catalog type of Application Catalog. (string value)
+#catalog_type = application-catalog
+
+# The endpoint type for application catalog service. (string value)
+# Possible values:
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Time in seconds between application catalog availability checks.
+# (integer value)
+#build_interval = 3
+
+# Timeout in seconds to wait for a application catalog to become
+# available. (integer value)
+#build_timeout = 500
+
+# Tells tempest about murano glare backend configuration. (boolean
+# value)
+#glare_backend = false
+
+# Whether or not cinder volumes attachment tests are expected to run
+# (boolean value)
+#cinder_volume_tests = false
+
+# Whether or not deployment tests are expected to run (boolean value)
+#deployment_tests = false
+
+
+[artifacts]
+
+#
+# From tempest.config
+#
+
+# Catalog type of Artifacts API (string value)
+#catalog_type = artifact
+
+# The endpoint type for artifacts service (string value)
+# Possible values:
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Time in seconds between artifacts availability checks. (integer
+# value)
+#build_interval = 3
+
+# Timeout in seconds to wait for a artifacts to become available.
+# (integer value)
+#build_timeout = 500
+
+
+[auth]
+
+#
+# From tempest.config
+#
+
+# Path to the yaml file that contains the list of credentials to use
+# for running tests. If used when running in parallel you have to make
+# sure sufficient credentials are provided in the accounts file. For
+# example if no tests with roles are being run it requires at least `2
+# * CONC` distinct accounts configured in  the `test_accounts_file`,
+# with CONC == the number of concurrent test processes. (string value)
+#test_accounts_file = <None>
+
+# Allows test cases to create/destroy projects and users. This option
+# requires that OpenStack Identity API admin credentials are known. If
+# false, isolated test cases and parallel execution, can still be
+# achieved configuring a list of test accounts (boolean value)
+#use_dynamic_credentials = true
+
+# Roles to assign to all users created by tempest (list value)
+#tempest_roles =
+
+# Default domain used when getting v3 credentials. This is the name
+# keystone uses for v2 compatibility. (string value)
+# Deprecated group/name - [auth]/tenant_isolation_domain_name
+#default_credentials_domain_name = Default
+
+# If use_dynamic_credentials is set to True and Neutron is enabled
+# Tempest will try to create a usable network, subnet, and router when
+# needed for each project it creates. However in some neutron
+# configurations, like with VLAN provider networks, this doesn't work.
+# So if set to False the isolated networks will not be created
+# (boolean value)
+#create_isolated_networks = true
+
+# Username for an administrative user. This is needed for
+# authenticating requests made by project isolation to create users
+# and projects (string value)
+#admin_username = <None>
+
+# Project name to use for an administrative user. This is needed for
+# authenticating requests made by project isolation to create users
+# and projects (string value)
+# Deprecated group/name - [auth]/admin_tenant_name
+# Deprecated group/name - [identity]/admin_tenant_name
+#admin_project_name = <None>
+
+# Password to use for an administrative user. This is needed for
+# authenticating requests made by project isolation to create users
+# and projects (string value)
+#admin_password = <None>
+
+# Admin domain name for authentication (Keystone V3).The same domain
+# applies to user and project (string value)
+#admin_domain_name = Default
+
+
+[aws]
+
+#
+# From tempest.config
+#
+
+# EC2 URL (string value)
+#ec2_url = http://localhost:8788/
+
+# S3 URL (string value)
+#s3_url = http://localhost:3334/
+
+# The CA certificate bundle to use when verifying SSL certificates. Or
+# True/False to pass to botocore. (string value)
+#ca_bundle = <None>
+
+# AWS Secret Key (string value)
+#aws_secret = <None>
+
+# AWS Access Key (string value)
+#aws_access = <None>
+
+# AWS region for EC2 tests (string value)
+#aws_region = RegionOne
+
+# AWS zone inside region for EC2 tests (string value)
+#aws_zone = nova
+
+# Status Change Timeout (integer value)
+#build_timeout = 120
+
+# Status Change Test Interval (integer value)
+#build_interval = 1
+
+# Instance type (string value)
+#instance_type = m1.tiny
+
+# Instance type (string value)
+#instance_type_alt = <None>
+
+# Image ID for instance running(can be cirros). It must be any
+# instance with instance-store root device type. (string value)
+#image_id = <None>
+
+# EBS Image ID for testing snapshots, volumes, instances. (string
+# value)
+#ebs_image_id = <None>
+
+# User for sshing into instance based on configured image (string
+# value)
+#image_user = cirros
+
+# Fully functional image ID for instance running. For some tests it
+# must be ubuntu-trusty-i386. (string value)
+#image_id_ubuntu = <None>
+
+# User for sshing into instance based on configured image (string
+# value)
+#image_user_ubuntu = ubuntu
+
+# Will run all tests plus incompatible with Amazon. (boolean value)
+#run_incompatible_tests = false
+
+# Will run all long tests also. (boolean value)
+#run_long_tests = false
+
+# S3 URL with manifest of AMI Machine Image. (string value)
+#ami_image_location = <None>
+
+# Can block all tests that wants to ssh into instance. (boolean value)
+#run_ssh = true
+
+
+[baremetal]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the baremetal provisioning service (string value)
+#catalog_type = baremetal
+
+# Driver name to use for API tests (string value)
+#driver = fake
+
+# The endpoint type to use for the baremetal provisioning service
+# (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Timeout for Ironic node to reach the wait-callback state after
+# powering on. (integer value)
+#deploywait_timeout = 15
+
+# Timeout for Ironic node to completely provision (integer value)
+#active_timeout = 300
+
+# Timeout for association of Nova instance and Ironic node (integer
+# value)
+#association_timeout = 30
+
+# Timeout for Ironic power transitions. (integer value)
+#power_timeout = 60
+
+# Timeout for unprovisioning an Ironic node. Takes longer since Kilo
+# as Ironic performs an extra step in Node cleaning. (integer value)
+#unprovision_timeout = 300
+
+# Timeout for rescuing an Ironic node. (integer value)
+#rescue_timeout = 300
+
+# Timeout for unrescuing an Ironic node. (integer value)
+#unrescue_timeout = 300
+
+# Lower version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are None, Tempest avoids tests which require a microversion.
+# (string value)
+#min_microversion = <None>
+
+# Upper version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are None, Tempest avoids tests which require a microversion.
+# (string value)
+#max_microversion = latest
+
+# Whether the Ironic/Neutron tenant isolation is enabled (boolean
+# value)
+#use_provision_network = false
+
+# UUID of the wholedisk image to use in the tests. (string value)
+#whole_disk_image_ref = <None>
+
+# An http link to the wholedisk image to use in the tests. (string
+# value)
+#whole_disk_image_url = <None>
+
+# An MD5 checksum of the image. (string value)
+#whole_disk_image_checksum = <None>
+
+# UUID of the partitioned image to use in the tests. (string value)
+#partition_image_ref = <None>
+
+# List of Ironic enabled drivers. (list value)
+#enabled_drivers = fake,pxe_ipmitool,agent_ipmitool
+
+# List of Ironic enabled hardware types. (list value)
+#enabled_hardware_types = ipmi
+
+# List of Ironic enabled bios interfaces. (list value)
+#enabled_bios_interfaces = fake
+
+# List of Ironic enabled deploy interfaces. (list value)
+#enabled_deploy_interfaces = iscsi,direct
+
+# List of Ironic enabled rescue interfaces. (list value)
+#enabled_rescue_interfaces = no-rescue
+
+# Ironic default rescue interface. (string value)
+#default_rescue_interface = <None>
+
+# Ironic adjusted disk size to use in the standalone tests as
+# instance_info/root_gb value. (integer value)
+# Minimum value: 0
+#adjusted_root_disk_size_gb = <None>
+
+# The number of baremetal hosts available to use for the tests.
+# (integer value)
+# Minimum value: 0
+#available_nodes = <None>
+
+
+[baremetal_feature_enabled]
+
+#
+# From tempest.config
+#
+
+# Defines if IPXE is enabled (boolean value)
+#ipxe_enabled = true
+
+
+[baremetal_introspection]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the baremetal provisioning service (string value)
+#catalog_type = baremetal-introspection
+
+# The endpoint type to use for the baremetal introspection service
+# (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Introspection sleep before check status (integer value)
+#introspection_sleep = 30
+
+# Introspection time out (integer value)
+#introspection_timeout = 600
+
+# Time to wait until nova becomes aware of bare metal instances
+# (integer value)
+#hypervisor_update_sleep = 60
+
+# Time out for wait until nova becomes aware of bare metal instances
+# (integer value)
+#hypervisor_update_timeout = 300
+
+# Time it might take for Ironic--Inspector sync to happen (integer
+# value)
+#ironic_sync_timeout = 80
+
+# Time to wait until new node would enrolled in ironic (integer value)
+#discovery_timeout = 300
+
+# Is the auto-discovery feature enabled. Enroll hook should be
+# specified in node_not_found_hook - processing section of
+# inspector.conf (boolean value)
+#auto_discovery_feature = false
+
+# The driver expected to be set on newly discovered nodes. Only has
+# effect with auto_discovery_feature is True. (string value)
+#auto_discovery_default_driver = fake
+
+
+[compute]
+
+#
+# From tempest.config
+#
+
+# Valid primary image reference to be used in tests. This is a
+# required option (string value)
+#image_ref = <None>
+
+# Valid secondary image reference to be used in tests. This is a
+# required option, but if only one image is available duplicate the
+# value of image_ref above (string value)
+#image_ref_alt = <None>
+
+# Valid primary flavor to use in tests. (string value)
+#flavor_ref = 1
+
+# Valid secondary flavor to be used in tests. (string value)
+#flavor_ref_alt = 2
+
+# Time in seconds between build status checks. (integer value)
+#build_interval = 1
+
+# Timeout in seconds to wait for an instance to build. Other services
+# that do not define build_timeout will inherit this value. (integer
+# value)
+#build_timeout = 300
+
+# Additional wait time for clean state, when there is no OS-EXT-STS
+# extension available (integer value)
+#ready_wait = 0
+
+# Name of the fixed network that is visible to all test projects. If
+# multiple networks are available for a project, this is the network
+# which will be used for creating servers if tempest does not create a
+# network or a network is not specified elsewhere. It may be used for
+# ssh validation only if floating IPs are disabled. (string value)
+#fixed_network_name = <None>
+
+# Catalog type of the Compute service. (string value)
+#catalog_type = compute
+
+# The compute region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the compute service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Expected device name when a volume is attached to an instance. Not
+# all hypervisors guarantee that they will respect the user defined
+# device name, tests may fail if inappropriate device name is set.
+# (string value)
+#volume_device_name = vdb
+
+# Time in seconds before a shelved instance is eligible for removing
+# from a host.  -1 never offload, 0 offload when shelved. This
+# configuration value should be same as
+# [nova.DEFAULT]->shelved_offload_time in nova.conf, and some tests
+# will run for as long as the time. (integer value)
+#shelved_offload_time = 0
+
+# The minimum number of compute nodes expected. This will be utilized
+# by some multinode specific tests to ensure that requests match the
+# expected size of the cluster you are testing with. (integer value)
+#min_compute_nodes = 1
+
+# Hypervisor type of the test target on heterogeneous compute
+# environment. The value can be 'QEMU', 'xen' or something. (string
+# value)
+#hypervisor_type = <None>
+
+# Lower version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are not specified, Tempest avoids tests which require a
+# microversion. Valid values are string with format 'X.Y' or string
+# 'latest' (string value)
+#min_microversion = <None>
+
+# Upper version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are not specified, Tempest avoids tests which require a
+# microversion. Valid values are string with format 'X.Y' or string
+# 'latest' (string value)
+#max_microversion = <None>
+
+
+[compute-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# If false, skip disk config tests (boolean value)
+#disk_config = true
+
+# DEPRECATED: A list of enabled compute extensions with a special
+# entry all which indicates every extension is enabled. Each extension
+# should be specified with alias name. Empty list indicates all
+# extensions are disabled (list value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: The Nova extensions API and mechanism is deprecated. This
+# option will be removed when all releases supported by tempest no
+# longer contain the Nova extensions API and mechanism.
+#api_extensions = all
+
+# Does the test environment support changing the admin password?
+# (boolean value)
+#change_password = false
+
+# Does the test environment support obtaining instance serial console
+# output? (boolean value)
+#console_output = true
+
+# Does the test environment support resizing? When you enable this
+# feature, 'flavor_ref_alt' should be set and it should refer to a
+# larger flavor than 'flavor_ref' one. (boolean value)
+#resize = false
+
+# Does the test environment support pausing? (boolean value)
+#pause = true
+
+# Does the test environment support shelving/unshelving? (boolean
+# value)
+#shelve = true
+
+# Does the test environment support suspend/resume? (boolean value)
+#suspend = true
+
+# Does the test environment support cold migration? (boolean value)
+#cold_migration = true
+
+# Does the test environment support live migration? (boolean value)
+#live_migration = true
+
+# Does the test environment support live migrating VM back and forth
+# between different versions of nova-compute? (boolean value)
+#live_migrate_back_and_forth = false
+
+# Does the test environment support metadata service? Ignored unless
+# validation.run_validation=true. (boolean value)
+#metadata_service = true
+
+# Does the test environment use block devices for live migration
+# (boolean value)
+#block_migration_for_live_migration = false
+
+# Does the test environment support block migration with Cinder iSCSI
+# volumes. Note: libvirt >= 1.2.17 is required to support this if
+# using the libvirt compute driver. (boolean value)
+#block_migrate_cinder_iscsi = false
+
+# Enable VNC console. This configuration value should be same as
+# [nova.vnc]->vnc_enabled in nova.conf (boolean value)
+#vnc_console = false
+
+# Expected VNC server name (WebSockify, nginx, etc) in response
+# header. (string value)
+#vnc_server_header = WebSockify
+
+# Enable Spice console. This configuration value should be same as
+# [nova.spice]->enabled in nova.conf (boolean value)
+#spice_console = false
+
+# Enable RDP console. This configuration value should be same as
+# [nova.rdp]->enabled in nova.conf (boolean value)
+#rdp_console = false
+
+# Enable serial console. This configuration value should be the same
+# as [nova.serial_console]->enabled in nova.conf (boolean value)
+#serial_console = false
+
+# Does the test environment support instance rescue mode? (boolean
+# value)
+#rescue = true
+
+# Enables returning of the instance password by the relevant server
+# API calls such as create, rebuild or rescue. This configuration
+# value should be same as nova.conf: DEFAULT.enable_instance_password
+# (boolean value)
+#enable_instance_password = true
+
+# Does the test environment support dynamic network interface
+# attachment? (boolean value)
+#interface_attach = true
+
+# Does the test environment support creating snapshot images of
+# running instances? (boolean value)
+#snapshot = true
+
+# DEPRECATED: Does the test environment have the nova cert running?
+# (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: On Nova side, the nova-cert service is deprecated and the
+# service will be removed as early as Ocata.
+#nova_cert = false
+
+# Does the test environment support server personality (boolean value)
+#personality = false
+
+# Does the test environment support attaching an encrypted volume to a
+# running server instance? This may depend on the combination of
+# compute_driver in nova and the volume_driver(s) in cinder. (boolean
+# value)
+#attach_encrypted_volume = true
+
+# Enable special configuration drive with metadata. (boolean value)
+#config_drive = true
+
+# A list of enabled filters that nova will accept as hints to the
+# scheduler when creating a server. A special entry 'all' indicates
+# all filters that are included with nova are enabled. Empty list
+# indicates all filters are disabled. The full list of available
+# filters is in nova.conf: DEFAULT.scheduler_available_filters. If the
+# default value is overridden in nova.conf by the test environment
+# (which means that a different set of filters is enabled than what is
+# included in Nova by default) then, this option must be configured to
+# contain the same filters that Nova uses in the test environment.
+# (list value)
+#scheduler_available_filters = all
+
+# Does the test environment support in-place swapping of volumes
+# attached to a server instance? (boolean value)
+#swap_volume = false
+
+# Does the test environment support volume-backed live migration?
+# (boolean value)
+#volume_backed_live_migration = false
+
+# Does the test environment support attaching a volume to more than
+# one instance? This depends on hypervisor and volume backend/type and
+# compute API version 2.60. (boolean value)
+#volume_multiattach = false
+
+
+[congressha]
+
+#
+# From tempest.config
+#
+
+# service type used to create a replica congress server. (string
+# value)
+#replica_type = policyha
+
+# The listening port for a replica congress server.  (integer value)
+#replica_port = 4001
+
+
+[congressz3]
+
+#
+# From tempest.config
+#
+
+# Whether Z3 is installed or not for Congress (boolean value)
+#enabled = false
+
+
+[dashboard]
+
+#
+# From tempest.config
+#
+
+# Where the dashboard can be found (string value)
+#dashboard_url = http://localhost/
+
+# DEPRECATED: Login page for the dashboard (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#login_url = http://localhost/auth/login/
+
+# Set to True if using self-signed SSL certificates. (boolean value)
+#disable_ssl_certificate_validation = false
+
+
+[data-processing]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the data processing service. (string value)
+#catalog_type = data-processing
+
+# The endpoint type to use for the data processing service. (string
+# value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+
+[data-processing-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# List of enabled data processing plugins (list value)
+#plugins = vanilla,cdh
+
+# Does Sahara support S3? (boolean value)
+#s3 = false
+
+
+[database]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Database service. (string value)
+#catalog_type = database
+
+# The endpoint type to use for the Database service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Valid primary flavor to use in Database tests. (string value)
+#db_flavor_ref = 1
+
+# Current database version to use in Database tests. (string value)
+#db_current_version = v1.0
+
+
+[debug]
+
+#
+# From tempest.config
+#
+
+# A regex to determine which requests should be traced.
+#
+# This is a regex to match the caller for rest client requests to be
+# able to
+# selectively trace calls out of specific classes and methods. It
+# largely
+# exists for test development, and is not expected to be used in a
+# real deploy
+# of tempest. This will be matched against the discovered
+# ClassName:method
+# in the test environment.
+#
+# Expected values for this field are:
+#
+#  * ClassName:test_method_name - traces one test_method
+#  * ClassName:setUp(Class) - traces specific setup functions
+#  * ClassName:tearDown(Class) - traces specific teardown functions
+#  * ClassName:_run_cleanups - traces the cleanup functions
+#
+# If nothing is specified, this feature is not enabled. To trace
+# everything
+# specify .* as the regex.
+#  (string value)
+#trace_requests =
+
+
+[dns]
+
+#
+# From tempest.config
+#
+
+# The endpoint type to use for the DNS service (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Catalog type of the DNS service (string value)
+#catalog_type = dns
+
+# Time in seconds between build status checks. (integer value)
+#build_interval = 1
+
+# Timeout in seconds to wait for an resource to build. (integer value)
+#build_timeout = 360
+
+# The minimum value to respect when generating ttls (integer value)
+#min_ttl = 1
+
+# The nameservers to check for change going live (list value)
+#nameservers =
+
+# The timeout on a single dns query to a nameserver (integer value)
+#query_timeout = 1
+
+# The target zone to test the dns recordsets If it is not specified, a
+# new zone will be created  (string value)
+#zone_id = <None>
+
+
+[dns_feature_enabled]
+
+#
+# From tempest.config
+#
+
+# Is the v1 dns API enabled. (boolean value)
+#api_v1 = false
+
+# Is the v2 dns API enabled. (boolean value)
+#api_v2 = true
+
+# Is the admin dns API enabled. (boolean value)
+#api_admin = true
+
+# Is the v1 dns servers API enabled. (boolean value)
+#api_v1_servers = false
+
+# Is the v2 root recordsets API enabled. (boolean value)
+#api_v2_root_recordsets = false
+
+# Is the v2 quota API enabled. (boolean value)
+#api_v2_quotas = false
+
+# Is project IDs verified when setting v2 quotas. Must be set to True
+# starting from Rocky release. (boolean value)
+#api_v2_quotas_verify_project = false
+
+# Is https://bugs.launchpad.net/designate/+bug/1573141 fixed (boolean
+# value)
+#bug_1573141_fixed = true
+
+
+[event]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Event service. (string value)
+#catalog_type = event
+
+# The endpoint type to use for the event service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+
+[fed_scenario]
+
+#
+# From tempest.config
+#
+
+# The Identity Provider ID (string value)
+#idp_id = <None>
+
+# The Identity Provider remote IDs list (list value)
+#idp_remote_ids =
+
+# Username used to login in the Identity Provider (string value)
+#idp_username = <None>
+
+# Password used to login in the Identity Provider (string value)
+#idp_password = <None>
+
+# Identity Provider SAML2/ECP URL (string value)
+#idp_ecp_url = <None>
+
+# The assertion attribute to be used in the remote rules (string
+# value)
+#mapping_remote_type = <None>
+
+# The username to be used in the local rules. (string value)
+#mapping_user_name = {0}
+
+# The group name to be used in the local rules. The group must have at
+# least one assignment in one project. (string value)
+#mapping_group_name = federated_users
+
+# The domain name where the "mapping_group_name" is created. (string
+# value)
+#mapping_group_domain_name = federated_domain
+
+# The Protocol ID (string value)
+#protocol_id = mapped
+
+
+[heat_features_enabled]
+
+#
+# From tempest.config
+#
+
+# If false, skip stack cancel tests (boolean value)
+#stack_cancel = false
+
+
+[heat_plugin]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the orchestration service. (string value)
+#catalog_type = orchestration
+
+# Username to use for non admin API requests. (string value)
+#username = <None>
+
+# Non admin API key to use when authenticating. (string value)
+#password = <None>
+
+# Username to use for admin API requests. (string value)
+#admin_username = <None>
+
+# Admin API key to use when authentication. (string value)
+#admin_password = <None>
+
+# Project name to use for API requests. (string value)
+# Deprecated group/name - [heat_plugin]/tenant_name
+#project_name = <None>
+
+# Admin project name to use for admin API requests. (string value)
+# Deprecated group/name - [heat_plugin]/admin_tenant_name
+#admin_project_name = admin
+
+# Full URI of the OpenStack Identity API (Keystone). (string value)
+#auth_url = <None>
+
+# OpenStack Identity API version. (string value)
+#auth_version = <None>
+
+# User domain name, if keystone v3 auth_url is used (string value)
+#user_domain_name = <None>
+
+# Project domain name, if keystone v3 auth_url is used (string value)
+#project_domain_name = <None>
+
+# User domain id, if keystone v3 auth_url is used (string value)
+#user_domain_id = <None>
+
+# Project domain id, if keystone v3 auth_url is used (string value)
+#project_domain_id = <None>
+
+# The region name to use (string value)
+#region = <None>
+
+# The endpoint type to use for the orchestration service. (string
+# value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+#endpoint_type = public
+
+# Instance type for tests. Needs to be big enough for a full OS plus
+# the test workload (string value)
+#instance_type = <None>
+
+# Instance type enough for simplest cases. (string value)
+#minimal_instance_type = <None>
+
+# Name of image to use for tests which boot servers. (string value)
+#image_ref = <None>
+
+# Name of existing keypair to launch servers with. (string value)
+#keypair_name = <None>
+
+# Name of minimal (e.g cirros) image to use when launching test
+# instances. (string value)
+#minimal_image_ref = <None>
+
+# Set to True if using self-signed SSL certificates. (boolean value)
+#disable_ssl_certificate_validation = false
+
+# CA certificate to pass for servers that have https endpoint. (string
+# value)
+#ca_file = <None>
+
+# Time in seconds between build status checks. (integer value)
+#build_interval = 4
+
+# Timeout in seconds to wait for a stack to build. (integer value)
+#build_timeout = 1200
+
+# Network used for SSH connections. (string value)
+#network_for_ssh = heat-net
+
+# Visible fixed network name  (string value)
+#fixed_network_name = heat-net
+
+# Visible floating network name  (string value)
+#floating_network_name = public
+
+# Path to environment file which defines the resource type
+# Heat::InstallConfigAgent. Needs to be appropriate for the image_ref.
+# (string value)
+#boot_config_env = heat_tempest_plugin/tests/scenario/templates/boot_config_none_env.yaml
+
+# Visible fixed sub-network name  (string value)
+#fixed_subnet_name = heat-subnet
+
+# Timeout in seconds to wait for authentication to succeed. (integer
+# value)
+#ssh_timeout = 300
+
+# IP version used for SSH connections. (integer value)
+#ip_version_for_ssh = 4
+
+# Timeout in seconds to wait for output from ssh channel. (integer
+# value)
+#ssh_channel_timeout = 60
+
+# Skip all scenario tests (boolean value)
+#skip_scenario_tests = false
+
+# Skip all functional tests (boolean value)
+#skip_functional_tests = false
+
+# List of functional test class or class.method names to skip ex.
+# AutoscalingGroupTest, InstanceGroupBasicTest.test_size_updates_work
+# (list value)
+#skip_functional_test_list = <None>
+
+# List of scenario test class or class.method names to skip ex.
+# NeutronLoadBalancerTest, AodhAlarmTest.test_alarm (list value)
+#skip_scenario_test_list = <None>
+
+# List of stack actions in tests to skip ex. ABANDON, ADOPT, SUSPEND,
+# RESUME (list value)
+#skip_test_stack_action_list = <None>
+
+# Test features that are only present for stacks with convergence
+# enabled. (boolean value)
+#convergence_engine_enabled = true
+
+# Default size in GB for volumes created by volumes tests (integer
+# value)
+#volume_size = 1
+
+# Timeout in seconds to wait for connectivity to server. (integer
+# value)
+#connectivity_timeout = 120
+
+# Path to the script heat-config-notify (string value)
+#heat_config_notify_script = heat-config-notify
+
+# Tag to be considered as hidden for stack tags tests (string value)
+#hidden_stack_tag = data-processing-cluster
+
+
+[identity]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Identity service. (string value)
+#catalog_type = identity
+
+# Set to True if using self-signed SSL certificates. (boolean value)
+#disable_ssl_certificate_validation = false
+
+# Specify a CA bundle file to use in verifying a TLS (https) server
+# certificate. (string value)
+#ca_certificates_file = <None>
+
+# Full URI of the OpenStack Identity API (Keystone), v2 (string value)
+#uri = <None>
+
+# Full URI of the OpenStack Identity API (Keystone), v3 (string value)
+#uri_v3 = <None>
+
+# Identity API version to be used for authentication for API tests.
+# (string value)
+#auth_version = v3
+
+# The identity region name to use. Also used as the other services'
+# region name unless they are set explicitly. If no such region is
+# found in the service catalog, the first found one is used. (string
+# value)
+#region = RegionOne
+
+# The admin endpoint type to use for OpenStack Identity (Keystone) API
+# v2 (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#v2_admin_endpoint_type = adminURL
+
+# The public endpoint type to use for OpenStack Identity (Keystone)
+# API v2 (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+# Deprecated group/name - [identity]/endpoint_type
+#v2_public_endpoint_type = publicURL
+
+# The endpoint type to use for OpenStack Identity (Keystone) API v3.
+# The default value adminURL is deprecated and will be modified to
+# publicURL in the next release. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#v3_endpoint_type = adminURL
+
+# Role required to administrate keystone. (string value)
+#admin_role = admin
+
+# ID of the default domain (string value)
+#default_domain_id = default
+
+# Whether keystone identity v3 policy required a domain scoped token
+# to use admin APIs (boolean value)
+#admin_domain_scope = false
+
+# The number of unsuccessful login attempts the user is allowed before
+# having the account locked. (integer value)
+#user_lockout_failure_attempts = 2
+
+# The number of seconds a user account will remain locked. (integer
+# value)
+#user_lockout_duration = 5
+
+# The number of passwords for a user that must be unique before an old
+# password can be reused. (integer value)
+#user_unique_last_password_count = 2
+
+
+[identity-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# Does the identity service have delegation and impersonation enabled
+# (boolean value)
+#trust = true
+
+# DEPRECATED: Is the v2 identity API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: The identity v2.0 API was removed in the Queens release.
+# Tests that exercise the v2.0 API will be removed from tempest in the
+# v22.0.0 release. They are kept only to test stable branches.
+#api_v2 = false
+
+# Is the v2 identity admin API available? This setting only applies if
+# api_v2 is set to True. (boolean value)
+#api_v2_admin = true
+
+# Is the v3 identity API enabled (boolean value)
+#api_v3 = true
+
+# A list of enabled identity extensions with a special entry all which
+# indicates every extension is enabled. Empty list indicates all
+# extensions are disabled. To get the list of extensions run:
+# 'openstack extension list --identity' (list value)
+#api_extensions = all
+
+# Are domain specific drivers enabled? This configuration value should
+# be same as [identity]->domain_specific_drivers_enabled in
+# keystone.conf. (boolean value)
+#domain_specific_drivers = false
+
+# Does the environment have the security compliance settings enabled?
+# (boolean value)
+#security_compliance = false
+
+# Is the project tags identity v3 API available? (boolean value)
+#project_tags = false
+
+# Does the environment have application credentials enabled? (boolean
+# value)
+#application_credentials = false
+
+#
+# From tempest.config
+#
+
+# Does the environment support the Federated Identity feature?
+# (boolean value)
+#federation = false
+
+
+[image]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Image service. (string value)
+#catalog_type = image
+
+# The image region name to use. If empty, the value of identity.region
+# is used instead. If no such region is found in the service catalog,
+# the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the image service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# http accessible image (string value)
+#http_image = http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.gz
+
+# Timeout in seconds to wait for an image to become available.
+# (integer value)
+#build_timeout = 300
+
+# Time in seconds between image operation status checks. (integer
+# value)
+#build_interval = 1
+
+# A list of image's container formats users can specify. (list value)
+#container_formats = ami,ari,aki,bare,ovf,ova
+
+# A list of image's disk formats users can specify. (list value)
+#disk_formats = ami,ari,aki,vhd,vmdk,raw,qcow2,vdi,iso,vhdx
+
+
+[image-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# DEPRECATED: Is the v2 image API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: Glance v1 APIs are deprecated and v2 APIs are current one.
+# In future, Tempest will test v2 APIs only so this config option will
+# be removed.
+#api_v2 = true
+
+# DEPRECATED: Is the v1 image API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: Glance v1 APIs are deprecated and v2 APIs are current one.
+# In future, Tempest will test v2 APIs only so this config option will
+# be removed.
+#api_v1 = true
+
+
+[kuryr_kubernetes]
+
+#
+# From tempest.config
+#
+
+# Whether or not port pool feature is enabled (boolean value)
+#port_pool_enabled = false
+
+# Whether or not namespace handler and driver are enabled (boolean
+# value)
+#namespace_enabled = false
+
+# Whether or not service tests will be running (boolean value)
+#service_tests_enabled = true
+
+# Whether or not kuryr-controller and kuryr-cni are containerized
+# (boolean value)
+#containerized = false
+
+# Namespace where kuryr-controllers and kuryr-cnis run (string value)
+#kube_system_namespace = kube-system
+
+# Whether or not test run serially or in parallel (boolean value)
+#run_tests_serial = false
+
+
+[l2gw]
+
+#
+# From tempest.config
+#
+
+# Switch name ,interface and vlan id information  (string value)
+#l2gw_switch =
+
+# Switch name ,interface and vlan id information (string value)
+#l2gw_switch_2 =
+
+# Network node and compute node host names and IPs (string value)
+#hosts =
+
+# Switch IP (string value)
+#l2gw_switch_ip =
+
+# IP of ovsdb server (string value)
+#ovsdb_ip =
+
+# Port of ovsdb server (integer value)
+#ovsdb_port = 6632
+
+# schema name of ovsdb (string value)
+#ovsdb_schema_name =
+
+
+[load_balancer]
+
+#
+# From tempest.config
+#
+
+# The region name to use. If empty, the value of identity.region is
+# used instead. If no such region is found in the service catalog, the
+# first found one is used. (string value)
+#region =
+
+# Catalog type of the Octavia service. (string value)
+#catalog_type = load-balancer
+
+# The endpoint type to use for the load-balancer service (string
+# value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Time in seconds between build status checks for non-load-balancer
+# resources to build (integer value)
+#build_interval = 5
+
+# Timeout in seconds to wait for non-load-balancer resources to build
+# (integer value)
+#build_timeout = 300
+
+# Interval to check for status changes. (integer value)
+#check_interval = 5
+
+# Timeout, in seconds, to wait for a status change. (integer value)
+#check_timeout = 60
+
+# Runs the tests assuming no-op drivers are being used. Tests will
+# assume no actual amphora are created. (boolean value)
+#test_with_noop = false
+
+# Time in seconds between build status checks for a load balancer.
+# (integer value)
+#lb_build_interval = 10
+
+# Timeout in seconds to wait for a load balancer to build. (integer
+# value)
+#lb_build_timeout = 900
+
+# The load balancing member RBAC role. (string value)
+#member_role = load-balancer_member
+
+# The load balancing admin RBAC role. (string value)
+#admin_role = load-balancer_admin
+
+# Timeout in seconds to wait for a scp connection to complete.
+# (integer value)
+#scp_connection_timeout = 5
+
+# Retries for scp to attempt to connect. (integer value)
+#scp_connection_attempts = 20
+
+# The provider driver to use for the tests. (string value)
+#provider = octavia
+
+# Type of RBAC tests to run. "advanced" runs the octavia default RBAC
+# tests. "owner_or_admin" runs the legacy owner or admin tests. "none"
+# disables the RBAC tests. (string value)
+# Possible values:
+# advanced - <No description provided>
+# owner_or_admin - <No description provided>
+# none - <No description provided>
+#RBAC_test_type = advanced
+
+# When true the IPv6 tests will be run. (boolean value)
+#test_with_ipv6 = true
+
+# True if your cloud does not allow creating networks or specifying
+# the boot network for instances. (boolean value)
+#disable_boot_network = false
+
+# When true, security groups will be created for the test servers.
+# When false, port security will be disabled on the created networks.
+# (boolean value)
+#enable_security_groups = false
+
+# Overrides network creation and uses this network ID for all tests
+# (VIP, members, etc.). Required if test_subnet_override is set.
+# (string value)
+#test_network_override = <None>
+
+# Overrides subnet creation and uses this subnet ID for all IPv4 tests
+# (VIP, members, etc.). Optional (string value)
+#test_subnet_override = <None>
+
+# Overrides subnet creation and uses this subnet ID for all IPv6 tests
+# (VIP, members, etc.). Optional and only valid if
+# test_network_override is set. (string value)
+#test_ipv6_subnet_override = <None>
+
+# CIDR format subnet to use for the vip subnet. (string value)
+#vip_subnet_cidr = 10.1.1.0/24
+
+# CIDR format subnet to use for the IPv6 vip subnet. (string value)
+#vip_ipv6_subnet_cidr = fdde:1a92:7523:70a0::/64
+
+# CIDR format subnet to use for the member 1 subnet. (string value)
+#member_1_ipv4_subnet_cidr = 10.2.1.0/24
+
+# CIDR format subnet to use for the member 1 ipv6 subnet. (string
+# value)
+#member_1_ipv6_subnet_cidr = fd7b:f9f7:0fff:4eca::/64
+
+# CIDR format subnet to use for the member 2 subnet. (string value)
+#member_2_ipv4_subnet_cidr = 10.2.2.0/24
+
+# CIDR format subnet to use for the member 1 ipv6 subnet. (string
+# value)
+#member_2_ipv6_subnet_cidr = fd77:1457:4cf0:26a8::/64
+
+# If non-zero, generate a random name of the length provided for each
+# server, in the format "m[A-Z0-9]*".  (integer value)
+#random_server_name_length = 0
+
+# Availability zone to use for creating servers. (string value)
+#availability_zone = <None>
+
+
+[loadbalancer-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# Whether Health Monitor is available with provider driver or not.
+# (boolean value)
+#health_monitor_enabled = true
+
+
+[magnum]
+
+#
+# From tempest.config
+#
+
+# Image id to be used for ClusterTemplate. (string value)
+#image_id = fedora-atomic-latest
+
+# NIC id. (string value)
+#nic_id = public
+
+# Keypair id to use to log into nova instances. (string value)
+#keypair_id = default
+
+# Flavor id to use for ClusterTemplate. (string value)
+#flavor_id = s1.magnum
+
+# Bypass URL for Magnum to skip service catalog lookup (string value)
+#magnum_url = <None>
+
+# Master flavor id to use for ClusterTemplate. (string value)
+#master_flavor_id = m1.magnum
+
+# DEPRECATED: CSR location for certificates. This option is no longer
+# used for anything. (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#csr_location = /opt/stack/new/magnum/default.csr
+
+# DNS nameserver to use for ClusterTemplate. (string value)
+#dns_nameserver = 8.8.8.8
+
+# Specify whether to copy nova server logs on failure. (boolean value)
+#copy_logs = true
+
+
+[messaging]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Messaging service. (string value)
+#catalog_type = messaging
+
+# The maximum number of queue records per page when listing queues
+# (integer value)
+#max_queues_per_page = 20
+
+# The maximum metadata size for a queue (integer value)
+#max_queue_metadata = 65536
+
+# The maximum number of queue message per page when listing (or)
+# posting messages (integer value)
+#max_messages_per_page = 20
+
+# The maximum size of a message body (integer value)
+#max_message_size = 262144
+
+# The maximum number of messages per claim (integer value)
+#max_messages_per_claim = 20
+
+# The maximum ttl for a message (integer value)
+#max_message_ttl = 1209600
+
+# The maximum ttl for a claim (integer value)
+#max_claim_ttl = 43200
+
+# The maximum grace period for a claim (integer value)
+#max_claim_grace = 43200
+
+
+[metric]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Metric service. (string value)
+#catalog_type = metric
+
+# The endpoint type to use for the metric service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+
+[network]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Neutron service. (string value)
+#catalog_type = network
+
+# The network region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the network service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# The cidr block to allocate project ipv4 subnets from (string value)
+#project_network_cidr = 10.100.0.0/16
+
+# The mask bits for project ipv4 subnets (integer value)
+#project_network_mask_bits = 28
+
+# The cidr block to allocate project ipv6 subnets from (string value)
+#project_network_v6_cidr = 2003::/48
+
+# The mask bits for project ipv6 subnets (integer value)
+#project_network_v6_mask_bits = 64
+
+# Whether project networks can be reached directly from the test
+# client. This must be set to True when the 'fixed' connect_method is
+# selected. (boolean value)
+#project_networks_reachable = false
+
+# Id of the public network that provides external connectivity (string
+# value)
+#public_network_id =
+
+# Default floating network name. Used to allocate floating IPs when
+# neutron is enabled. (string value)
+#floating_network_name = <None>
+
+# Id of the public router that provides external connectivity. This
+# should only be used when Neutron's 'allow_overlapping_ips' is set to
+# 'False' in neutron.conf. usually not needed past 'Grizzly' release
+# (string value)
+#public_router_id =
+
+# Timeout in seconds to wait for network operation to complete.
+# (integer value)
+#build_timeout = 300
+
+# Time in seconds between network operation status checks. (integer
+# value)
+#build_interval = 1
+
+# List of dns servers which should be used for subnet creation (list
+# value)
+#dns_servers = 8.8.8.8,8.8.4.4
+
+# vnic_type to use when launching instances with pre-configured ports.
+# Supported ports are: ['normal','direct','macvtap'] (string value)
+# Possible values:
+# <None> - <No description provided>
+# normal - <No description provided>
+# direct - <No description provided>
+# macvtap - <No description provided>
+#port_vnic_type = <None>
+
+# port profile to use when launching instances with pre-configured
+# ports. (dict value)
+#port_profile =
+
+# List of ip pools for subnetpools creation (list value)
+#default_network = 1.0.0.0/16,2.0.0.0/16
+
+# The environment does not support network separation between tenants.
+# (boolean value)
+#shared_physical_network = false
+
+
+[network-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# Allow the execution of IPv6 tests (boolean value)
+#ipv6 = true
+
+# A list of enabled network extensions with a special entry all which
+# indicates every extension is enabled. Empty list indicates all
+# extensions are disabled. To get the list of extensions run: 'neutron
+# ext-list' (list value)
+#api_extensions = all
+
+# Allow the execution of IPv6 subnet tests that use the extended IPv6
+# attributes ipv6_ra_mode and ipv6_address_mode (boolean value)
+#ipv6_subnet_attributes = false
+
+# Does the test environment support changing port admin state (boolean
+# value)
+#port_admin_state_change = true
+
+# Does the test environment support port security? (boolean value)
+#port_security = false
+
+# Does the test environment support floating_ips (boolean value)
+#floating_ips = true
+
+
+[novajoin]
+
+#
+# From tempest.config
+#
+
+# Keytab to connect to IPA as the novajoin user (string value)
+#keytab = /home/stack/novajoin.keytab
+
+# Run triple-O config tests (string value)
+#tripleo = True
+
+# List of overcloud controller short host names (list value)
+#tripleo_controllers = overcloud-controller-0
+
+# List of overcloud compute short host names (list value)
+#tripleo_computes = overcloud-novacompute-0
+
+# Undercloud short host name (string value)
+#tripleo_undercloud = undercloud
+
+
+[object-storage]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Object-Storage service. (string value)
+#catalog_type = object-store
+
+# The object-storage region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the object-store service. (string
+# value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Number of seconds to time on waiting for a container to container
+# synchronization complete. (integer value)
+#container_sync_timeout = 600
+
+# Number of seconds to wait while looping to check the status of a
+# container to container synchronization (integer value)
+#container_sync_interval = 5
+
+# Role to add to users created for swift tests to enable creating
+# containers (string value)
+#operator_role = Member
+
+# User role that has reseller admin (string value)
+#reseller_admin_role = ResellerAdmin
+
+# Name of sync realm. A sync realm is a set of clusters that have
+# agreed to allow container syncing with each other. Set the same
+# realm name as Swift's container-sync-realms.conf (string value)
+#realm_name = realm1
+
+# One name of cluster which is set in the realm whose name is set in
+# 'realm_name' item in this file. Set the same cluster name as Swift's
+# container-sync-realms.conf (string value)
+#cluster_name = name1
+
+
+[object-storage-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# A list of the enabled optional discoverable apis. A single entry,
+# all, indicates that all of these features are expected to be enabled
+# (list value)
+#discoverable_apis = all
+
+# Execute (old style) container-sync tests (boolean value)
+#container_sync = true
+
+# Execute object-versioning tests (boolean value)
+#object_versioning = true
+
+# Execute discoverability tests (boolean value)
+#discoverability = true
+
+
+[orchestration]
+
+#
+# From tempest.config
+#
+
+# Catalog type of the Orchestration service. (string value)
+#catalog_type = orchestration
+
+# The orchestration region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the orchestration service. (string
+# value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Role required for users to be able to manage stacks (string value)
+#stack_owner_role = heat_stack_owner
+
+# Time in seconds between build status checks. (integer value)
+#build_interval = 1
+
+# Timeout in seconds to wait for a stack to build. (integer value)
+#build_timeout = 1200
+
+
+[oslo_concurrency]
+
+#
+# From oslo.concurrency
+#
+
+# Enables or disables inter-process locks. (boolean value)
+#disable_process_locking = false
+
+# Directory to use for lock files.  For security, the specified
+# directory should only be writable by the user running the processes
+# that need locking. Defaults to environment variable OSLO_LOCK_PATH.
+# If external locks are used, a lock path must be set. (string value)
+#lock_path = /tmp/tempest-lock
+
+
+[patrole]
+
+#
+# From tempest.config
+#
+
+# The current RBAC role against which to run
+# Patrole tests. (string value)
+#rbac_test_role = admin
+
+# DEPRECATED: Enables Patrole RBAC tests. (boolean value)
+# This option is deprecated for removal since R.
+# Its value may be silently ignored in the future.
+# Reason: This is a legacy option that was
+# meaningful when Patrole existed downstream as a suite of tests
+# inside Tempest.
+# Installing the Patrole plugin necessarily means that RBAC tests
+# should be run.
+# This option is paradoxical with the Tempest plugin architecture.
+#enable_rbac = true
+
+# List of the paths to search for policy files. Each
+# policy path assumes that the service name is included in the path
+# once. Also
+# assumes Patrole is on the same host as the policy files. The paths
+# should be
+# ordered by precedence, with high-priority paths before low-priority
+# paths. The
+# first path that is found to contain the service's policy file will
+# be used.
+#  (list value)
+#custom_policy_files = /etc/%s/policy.json
+
+#
+# This option determines whether Patrole should run against a
+# ``custom_requirements_file`` which defines RBAC requirements. The
+# purpose of setting this flag to ``True`` is to verify that RBAC
+# policy
+# is in accordance to requirements. The idea is that the
+# ``custom_requirements_file`` precisely defines what the RBAC
+# requirements are.
+#
+# Here are the possible outcomes when running the Patrole tests
+# against
+# a ``custom_requirements_file``:
+#
+# YAML definition: allowed
+# test run: allowed
+# test result: pass
+#
+# YAML definition: allowed
+# test run: not allowed
+# test result: fail (under-permission)
+#
+# YAML definition: not allowed
+# test run: allowed
+# test result: fail (over-permission)
+#  (boolean value)
+#test_custom_requirements = false
+
+#
+# File path of the YAML file that defines your RBAC requirements. This
+# file must be located on the same host that Patrole runs on. The YAML
+# file should be written as follows:
+#
+# .. code-block:: yaml
+#
+#     <service_foo>:
+#       <api_action_a>:
+#         - <allowed_role_1>
+#         - <allowed_role_2>
+#         - <allowed_role_3>
+#       <api_action_b>:
+#         - <allowed_role_2>
+#         - <allowed_role_4>
+#     <service_bar>:
+#       <api_action_c>:
+#         - <allowed_role_3>
+#
+# Where:
+#
+# service = the service that is being tested (Cinder, Nova, etc.).
+#
+# api_action = the policy action that is being tested. Examples:
+#
+# * volume:create
+# * os_compute_api:servers:start
+# * add_image
+#
+# allowed_role = the ``oslo.policy`` role that is allowed to perform
+# the API.
+#  (string value)
+#custom_requirements_file = <None>
+
+
+[policy-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# Is the Neutron policy
+# "create_port:fixed_ips:ip_address" available in the cloud? This
+# policy was
+# changed in a backwards-incompatible way. (boolean value)
+#create_port_fixed_ips_ip_address_policy = true
+
+# Is the Neutron policy
+# "update_port:fixed_ips:ip_address" available in the cloud? This
+# policy was
+# changed in a backwards-incompatible way. (boolean value)
+#update_port_fixed_ips_ip_address_policy = true
+
+# Is the Cinder policy
+# "limits_extension:used_limits" available in the cloud? This policy
+# was
+# changed in a backwards-incompatible way. (boolean value)
+#limits_extension_used_limits_policy = true
+
+# Is the Cinder policy
+# "volume_extension:volume_actions:attach" available in the cloud?
+# This policy
+# was changed in a backwards-incompatible way. (boolean value)
+#volume_extension_volume_actions_attach_policy = true
+
+# Is the Cinder policy
+# "volume_extension:volume_actions:reserve" available in the cloud?
+# This policy
+# was changed in a backwards-incompatible way. (boolean value)
+#volume_extension_volume_actions_reserve_policy = true
+
+# Is the Cinder policy
+# "volume_extension:volume_actions:unreserve" available in the cloud?
+# This policy
+# was changed in a backwards-incompatible way. (boolean value)
+#volume_extension_volume_actions_unreserve_policy = true
+
+
+[root_cause_analysis_service]
+
+#
+# From tempest.config
+#
+
+# The application_catalog region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# Default identity version for REST client authentication. (string
+# value)
+#identity_version = v2
+
+
+[scenario]
+
+#
+# From tempest.config
+#
+
+# DEPRECATED: Directory containing image files (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#img_dir = /opt/stack/new/devstack/files/images/cirros-0.3.1-x86_64-uec
+
+# Image file name (string value)
+# Deprecated group/name - [scenario]/qcow2_img_file
+#img_file = cirros-0.3.1-x86_64-disk.img
+
+# Image disk format (string value)
+#img_disk_format = qcow2
+
+# Image container format (string value)
+#img_container_format = bare
+
+# Glance image properties. Use for custom images which require them
+# (dict value)
+#img_properties = <None>
+
+# DEPRECATED: AMI image file name (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#ami_img_file = cirros-0.3.1-x86_64-blank.img
+
+# DEPRECATED: ARI image file name (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#ari_img_file = cirros-0.3.1-x86_64-initrd
+
+# DEPRECATED: AKI image file name (string value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+#aki_img_file = cirros-0.3.1-x86_64-vmlinuz
+
+# DHCP client used by images to renew DCHP lease. If left empty,
+# update operation will be skipped. Supported clients: "udhcpc",
+# "dhclient" (string value)
+# Possible values:
+# udhcpc - <No description provided>
+# dhclient - <No description provided>
+# '' - <No description provided>
+#dhcp_client = udhcpc
+
+
+[service-clients]
+
+#
+# From tempest.config
+#
+
+# Timeout in seconds to wait for the http request to return (integer
+# value)
+#http_timeout = 60
+
+# Specify an http proxy to use. (string value)
+#proxy_url = <None>
+
+
+[service_available]
+
+#
+# From tempest.config
+#
+
+# Whether or not cinder is expected to be available (boolean value)
+#cinder = true
+
+# Whether or not neutron is expected to be available (boolean value)
+#neutron = false
+
+# Whether or not glance is expected to be available (boolean value)
+#glance = true
+
+# Whether or not swift is expected to be available (boolean value)
+#swift = true
+
+# Whether or not nova is expected to be available (boolean value)
+#nova = true
+
+#
+# From tempest.config
+#
+
+# Whether or not Zaqar is expected to be available (boolean value)
+#zaqar = true
+
+# Whether or not watcher is expected to be available (boolean value)
+#watcher = true
+
+# Whether or not vitrage is expected to be available (boolean value)
+#vitrage = true
+
+# Whether or not Trove is expected to be available (boolean value)
+#trove = true
+
+# Whether or not Horizon is expected to be available (boolean value)
+#horizon = true
+
+# Whether or not Ceilometer is expected tobe available (boolean value)
+#ceilometer = true
+
+# Whether or not Panko is expected to beavailable (boolean value)
+#panko = true
+
+# Whether or not Aodh is expected to beavailable (boolean value)
+# Deprecated group/name - [service_available]/aodh_plugin
+#aodh = true
+
+# Whether or not Gnocchi is expected to beavailable (boolean value)
+#gnocchi = true
+
+# Whether or not the load-balancer service is expected to be
+# available. (boolean value)
+#load_balancer = true
+
+# Whether or not novajoin is expected to be available (boolean value)
+#novajoin = true
+
+# Whether or not murano is expected to be available (boolean value)
+#murano = true
+
+# Whether or not murano-cfapi is expected to be unavailable by default
+# (boolean value)
+#murano_cfapi = false
+
+# Whether or not glare is expected to be unavailable (boolean value)
+#glare = false
+
+# Whether or not Mistral is expected to beavailable (boolean value)
+#mistral = true
+
+# Whether or not manila is expected to be available (boolean value)
+#manila = true
+
+# Whether or not magnum is expected to be available (boolean value)
+#magnum = true
+
+# Whether or not kuryr is expected to be available (boolean value)
+#kuryr = true
+
+# Whether or not ec2-api is expected to be available (boolean value)
+#ec2api = true
+
+# Whether or not designate is expected to be available. (boolean
+# value)
+#designate = true
+
+# Whether or not Congress is expected to be available (boolean value)
+#congress = true
+
+# Whether or not barbican is expected to be available (boolean value)
+#barbican = true
+
+
+[service_broker]
+
+#
+# From tempest.config
+#
+
+# Defines whether run service broker api tests or not (boolean value)
+#run_service_broker_tests = false
+
+# Catalog type of Service Broker API (string value)
+#catalog_type = service-broker
+
+# The endpoint type for service broker service (string value)
+# Possible values:
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# Time in seconds between service broker availability checks. (integer
+# value)
+#build_interval = 3
+
+# Timeout in seconds to wait for a service broker to become available.
+# (integer value)
+#build_timeout = 500
+
+
+[share]
+
+#
+# From tempest.config
+#
+
+# The minimum api microversion is configured to be the value of the
+# minimum microversion supported by Manila. (string value)
+#min_api_microversion = 2.0
+
+# The maximum api microversion is configured to be the value of the
+# latest microversion supported by Manila. (string value)
+#max_api_microversion = 2.46
+
+# The share region name to use. If empty, the value of identity.region
+# is used instead. If no such region is found in the service catalog,
+# the first found one is used. (string value)
+#region =
+
+# Catalog type of the Share service. (string value)
+#catalog_type = share
+
+# The endpoint type to use for the share service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# This option used to determine backend driver type, multitenant
+# driver uses share-networks, but single-tenant doesn't. (boolean
+# value)
+#multitenancy_enabled = true
+
+# This option is used only when other 'multitenancy_enabled' option is
+# set to 'True'. If this one is set to True, then tempest will create
+# neutron networks for each new manila share-network it creates. Else
+# it will use manila share-networks with empty values (case of
+# StandAloneNetworkPlugin and NeutronSingleNetworkPlugin). (boolean
+# value)
+#create_networks_when_multitenancy_enabled = true
+
+# First value of list is protocol by default, items of list show
+# enabled protocols at all. (list value)
+#enable_protocols = nfs,cifs
+
+# Selection of protocols, that should be covered with ip rule tests
+# (list value)
+#enable_ip_rules_for_protocols = nfs,cifs
+
+# Selection of protocols, that should be covered with user rule tests
+# (list value)
+#enable_user_rules_for_protocols =
+
+# Protocols that should be covered with cert rule tests. (list value)
+#enable_cert_rules_for_protocols = glusterfs
+
+# Protocols to be covered with cephx rule tests. (list value)
+#enable_cephx_rules_for_protocols = cephfs
+
+# Username, that will be used in user tests. (string value)
+#username_for_user_rules = Administrator
+
+# Forces access rules to be as specified on NFS scenario tests. This
+# can used for working around multiple NATs between the VMs and the
+# storage controller. (string value)
+#override_ip_for_nfs_access = <None>
+
+# List of protocols to run tests with ro access level. (list value)
+#enable_ro_access_level_for_protocols = nfs
+
+# Backend protocol to target when creating volume types. (string
+# value)
+# Deprecated group/name - [share]/storage_protocol
+#capability_storage_protocol = NFS_CIFS
+
+# Defines extra spec that satisfies specific back end capability
+# called 'snapshot_support' and will be used for setting up custom
+# share type. Defaults to value of other config option
+# 'run_snapshot_tests'. (boolean value)
+#capability_snapshot_support = <None>
+
+# Defines extra spec that satisfies specific back end capability
+# called 'create_share_from_snapshot_support' and will be used for
+# setting up a custom share type. Defaults to the value of
+# run_snapshot_tests. Set it to False if the driver being tested does
+# not support creating shares from snapshots. (boolean value)
+#capability_create_share_from_snapshot_support = <None>
+
+# DEPRECATED: Defines extra spec that satisfies specific back end
+# capability called 'revert_to_snapshot_support' and will be used for
+# setting up custom share type. Defaults to the value of
+# run_revert_to_snapshot_tests. (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: Redundant configuration option. Please use
+# 'run_revert_to_snapshot_tests' config option instead.
+#capability_revert_to_snapshot_support = <None>
+
+# Backend capability to create consistent snapshots of share group
+# members. Will be used with creation of new share group types as
+# group spec. (string value)
+# Possible values:
+# host - <No description provided>
+# pool - <No description provided>
+# <None> - <No description provided>
+#capability_sg_consistent_snapshot_support = <None>
+
+# Some backend drivers requires share network for share creation.
+# Share network id, that will be used for shares. If not set, it won't
+# be used. (string value)
+#share_network_id =
+
+# Share network id, that will be used for shares in alt tenant. If not
+# set, it won't be used (string value)
+#alt_share_network_id =
+
+# Share network id, that will be used for shares in admin tenant. If
+# not set, it won't be used (string value)
+#admin_share_network_id =
+
+# Runs Manila multi-backend tests. (boolean value)
+#multi_backend = false
+
+# Names of share backends, that will be used with multibackend tests.
+# Tempest will use first two values. (list value)
+#backend_names =
+
+# Defines number of retries for share creation. It is useful to avoid
+# failures caused by unstable environment. (integer value)
+#share_creation_retry_number = 0
+
+# Time in seconds between share availability checks. (integer value)
+#build_interval = 3
+
+# Timeout in seconds to wait for a share to becomeavailable. (integer
+# value)
+#build_timeout = 500
+
+# Whether to suppress errors with clean up operation or not. There are
+# cases when we may want to skip such errors and catch only test
+# errors. (boolean value)
+#suppress_errors_in_cleanup = false
+
+# Defines whether to run quota tests or not. (boolean value)
+#run_quota_tests = true
+
+# Defines whether to run share extend tests or not. Disable this
+# feature if used driver doesn't support it. (boolean value)
+#run_extend_tests = true
+
+# Defines whether to run share shrink tests or not. Disable this
+# feature if used driver doesn't support it. (boolean value)
+#run_shrink_tests = true
+
+# Defines whether to run tests that use share snapshots or not.
+# Disable this feature if used driver doesn't support it. (boolean
+# value)
+#run_snapshot_tests = true
+
+# Defines whether to run tests that revert shares to snapshots or not.
+# Enable this feature if used driver supports it. (boolean value)
+#run_revert_to_snapshot_tests = false
+
+# Defines whether to run share group tests or not. (boolean value)
+# Deprecated group/name - [share]/run_consistency_group_tests
+#run_share_group_tests = true
+
+# Defines whether to run replication tests or not. Enable this feature
+# if the driver is configured for replication. (boolean value)
+#run_replication_tests = false
+
+# Defines whether to run multiple replicas creation test or not.
+# Enable this if the driver can create more than one replica for a
+# share. (boolean value)
+#run_multiple_share_replicas_tests = true
+
+# Enable or disable host-assisted migration tests. (boolean value)
+# Deprecated group/name - [share]/run_migration_tests
+#run_host_assisted_migration_tests = false
+
+# Enable or disable driver-assisted migration tests. (boolean value)
+# Deprecated group/name - [share]/run_migration_tests
+#run_driver_assisted_migration_tests = false
+
+# Enable or disable migration with preserve_snapshots tests set to
+# True. (boolean value)
+#run_migration_with_preserve_snapshots_tests = false
+
+# Defines whether to run manage/unmanage tests or not. These test may
+# leave orphaned resources, so be careful enabling this opt. (boolean
+# value)
+#run_manage_unmanage_tests = false
+
+# Defines whether to run manage/unmanage snapshot tests or not. These
+# tests may leave orphaned resources, so be careful enabling this opt.
+# (boolean value)
+#run_manage_unmanage_snapshot_tests = false
+
+# Enable or disable mountable snapshot tests. (boolean value)
+#run_mount_snapshot_tests = false
+
+# Image name for vm booting with nfs/smb clients tool. (string value)
+#image_with_share_tools = manila-service-image-master
+
+# Image username. (string value)
+#image_username = manila
+
+# Image password. Should be used for 'image_with_share_tools' without
+# Nova Metadata support. (string value)
+#image_password = <None>
+
+# Flavor used for client vm in scenario tests. (string value)
+#client_vm_flavor_ref = 100
+
+# Time to wait for share migration before timing out (seconds).
+# (integer value)
+#migration_timeout = 1500
+
+# Default share type name to use in tempest tests. (string value)
+#default_share_type_name = <None>
+
+# Specify the replication type supported by the backend. (string
+# value)
+# Possible values:
+# none - <No description provided>
+# writable - <No description provided>
+# readable - <No description provided>
+# dr - <No description provided>
+#backend_replication_type = none
+
+# Default size in GB for shares created by share tests. (integer
+# value)
+#share_size = 1
+
+# Enable or disable running IPv6 tests. (boolean value)
+#run_ipv6_tests = false
+
+
+[telemetry]
+
+#
+# From tempest.config
+#
+
+# The seconds to wait for notifications which containers and objects
+# sent to swift. (integer value)
+#notification_wait = 120
+
+# The seconds to sleep after an unsuccessful notification received.
+# (integer value)
+#notification_sleep = 1
+
+# Granularity to use for aodh alarms. This must match the configured
+# Gnocchi archive policy (integer value)
+#alarm_granularity = 300
+
+# Name of the metric to create an alarm on. (string value)
+#alarm_metric_name = cpu
+
+# Aggregation method to use for alarm. (string value)
+#alarm_aggregation_method = rate:mean
+
+# Threshold to cross for the alarm to trigger. (integer value)
+#alarm_threshold = 10
+
+
+[validation]
+
+#
+# From tempest.config
+#
+
+# Enable ssh on created servers and creation of additional validation
+# resources to enable remote access (boolean value)
+#run_validation = false
+
+# Enable/disable security groups. (boolean value)
+#security_group = true
+
+# Enable/disable security group rules. (boolean value)
+#security_group_rules = true
+
+# Default IP type used for validation: -fixed: uses the first IP
+# belonging to the fixed network -floating: creates and uses a
+# floating IP (string value)
+# Possible values:
+# fixed - <No description provided>
+# floating - <No description provided>
+#connect_method = floating
+
+# Default authentication method to the instance. Only ssh via keypair
+# is supported for now. Additional methods will be handled in a
+# separate spec. (string value)
+# Possible values:
+# keypair - <No description provided>
+#auth_method = keypair
+
+# Default IP version for ssh connections. (integer value)
+#ip_version_for_ssh = 4
+
+# Timeout in seconds to wait for ping to succeed. (integer value)
+#ping_timeout = 120
+
+# Timeout in seconds to wait for the TCP connection to be successful.
+# (integer value)
+#connect_timeout = 60
+
+# Timeout in seconds to wait for the ssh banner. (integer value)
+#ssh_timeout = 300
+
+# User name used to authenticate to an instance. (string value)
+#image_ssh_user = root
+
+# Password used to authenticate to an instance. (string value)
+#image_ssh_password = password
+
+# Shell fragments to use before executing a command when sshing to a
+# guest. (string value)
+#ssh_shell_prologue = set -eu -o pipefail; PATH=$$PATH:/sbin;
+
+# The packet size for ping packets originating from remote linux hosts
+# (integer value)
+#ping_size = 56
+
+# The number of ping packets originating from remote linux hosts
+# (integer value)
+#ping_count = 1
+
+# Unallocated floating IP range, which will be used to test the
+# floating IP bulk feature for CRUD operation. This block must not
+# overlap an existing floating IP pool. (string value)
+#floating_ip_range = 10.0.0.0/29
+
+# Network used for SSH connections. Ignored if
+# connect_method=floating. (string value)
+#network_for_ssh = public
+
+
+[vif_pool]
+
+#
+# From tempest.config
+#
+
+# The size of pool batch when KURYR_USE_PORT_POOLS is enabled (integer
+# value)
+#ports_pool_batch = 10
+
+# The max time (in seconds) it should take to create LB (integer
+# value)
+#lb_build_timeout = 900
+
+
+[volume]
+
+#
+# From tempest.config
+#
+
+# Time in seconds between volume availability checks. (integer value)
+#build_interval = 1
+
+# Timeout in seconds to wait for a volume to become available.
+# (integer value)
+#build_timeout = 300
+
+# Catalog type of the Volume Service (string value)
+#catalog_type = volumev3
+
+# The volume region name to use. If empty, the value of
+# identity.region is used instead. If no such region is found in the
+# service catalog, the first found one is used. (string value)
+#region =
+
+# The endpoint type to use for the volume service. (string value)
+# Possible values:
+# public - <No description provided>
+# admin - <No description provided>
+# internal - <No description provided>
+# publicURL - <No description provided>
+# adminURL - <No description provided>
+# internalURL - <No description provided>
+#endpoint_type = publicURL
+
+# A list of backend names separated by comma. The backend name must be
+# declared in cinder.conf (list value)
+#backend_names = BACKEND_1,BACKEND_2
+
+# Backend protocol to target when creating volume types (string value)
+#storage_protocol = iSCSI
+
+# Backend vendor to target when creating volume types (string value)
+#vendor_name = Open Source
+
+# Disk format to use when copying a volume to image (string value)
+#disk_format = raw
+
+# Default size in GB for volumes created by volumes tests (integer
+# value)
+#volume_size = 1
+
+# A reference to existing volume for volume manage. It contains two
+# elements, the first is ref type (like 'source-name', 'source-id',
+# etc), the second is volume name template used in storage backend
+# (list value)
+#manage_volume_ref = source-name,volume-%s
+
+# A reference to existing snapshot for snapshot manage. It contains
+# two elements, the first is ref type (like 'source-name', 'source-
+# id', etc), the second is snapshot name template used in storage
+# backend (list value)
+#manage_snapshot_ref = source-name,_snapshot-%s
+
+# Lower version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are not specified, Tempest avoids tests which require a
+# microversion. Valid values are string with format 'X.Y' or string
+# 'latest' (string value)
+#min_microversion = <None>
+
+# Upper version of the test target microversion range. The format is
+# 'X.Y', where 'X' and 'Y' are int values. Tempest selects tests based
+# on the range between min_microversion and max_microversion. If both
+# values are not specified, Tempest avoids tests which require a
+# microversion. Valid values are string with format 'X.Y' or string
+# 'latest' (string value)
+#max_microversion = <None>
+
+
+[volume-feature-enabled]
+
+#
+# From tempest.config
+#
+
+# Runs Cinder multi-backend test (requires 2 backends) (boolean value)
+#multi_backend = false
+
+# Runs Cinder volumes backup test (boolean value)
+#backup = true
+
+# Runs Cinder volume snapshot test (boolean value)
+#snapshot = true
+
+# Runs Cinder volume clone test (boolean value)
+#clone = true
+
+# Runs Cinder manage snapshot tests (boolean value)
+#manage_snapshot = false
+
+# Runs Cinder manage volume tests (boolean value)
+#manage_volume = false
+
+# A list of enabled volume extensions with a special entry all which
+# indicates every extension is enabled. Empty list indicates all
+# extensions are disabled (list value)
+#api_extensions = all
+
+# DEPRECATED: Is the v1 volume API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: The v1 volume API has been deprecated since Juno release,
+# and the API will be removed.
+#api_v1 = false
+
+# DEPRECATED: Is the v2 volume API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: The v2 volume API has been deprecated since Pike release.
+# Now Tempest run all the volume tests against v2 or v3 API based on
+# CONF.volume.catalog_type which makes this config option unusable. If
+# catalog_type is volumev2, then all the volume tests will run against
+# v2 API. Use ``CONF.volume.catalog_type`` to run the Tempest against
+# volume v2 or v3 API
+#api_v2 = true
+
+# DEPRECATED: Is the v3 volume API enabled (boolean value)
+# This option is deprecated for removal.
+# Its value may be silently ignored in the future.
+# Reason: Tempest run all the volume tests against v2 or v3 API based
+# on CONF.volume.catalog_type which makes this config option unusable.
+# If catalog_type is volumev3 which is default, then all the volume
+# tests will run against v3 API. Use ``CONF.volume.catalog_type`` to
+# run the Tempest against volume v2 or v3 API
+#api_v3 = true
+
+# Does the cloud support extending the size of a volume which is
+# currently attached to a server instance? This depends on the 3.42
+# volume API microversion and the 2.51 compute API microversion. Also,
+# not all volume or compute backends support this operation. (boolean
+# value)
+#extend_attached_volume = false
+
+#
+# From tempest.config
+#
+
+# Enable to run Cinder volume consistency group tests (boolean value)
+#consistency_group = false
+
+# Enable to run Cinder volume revert tests (boolean value)
+#volume_revert = false

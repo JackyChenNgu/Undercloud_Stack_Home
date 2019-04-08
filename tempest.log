@@ -1,0 +1,541 @@
+2019-04-08 07:00:35 | + source /home/stack/overcloudrc
+2019-04-08 07:00:35 | +++ set
+2019-04-08 07:00:35 | +++ awk '{FS="="}  /^OS_/ {print $1}'
+2019-04-08 07:00:35 | ++ export OS_NO_CACHE=True
+2019-04-08 07:00:35 | ++ OS_NO_CACHE=True
+2019-04-08 07:00:35 | ++ export COMPUTE_API_VERSION=1.1
+2019-04-08 07:00:35 | ++ COMPUTE_API_VERSION=1.1
+2019-04-08 07:00:35 | ++ export OS_USERNAME=admin
+2019-04-08 07:00:35 | ++ OS_USERNAME=admin
+2019-04-08 07:00:35 | ++ export no_proxy=,10.0.0.5,192.168.24.16
+2019-04-08 07:00:35 | ++ no_proxy=,10.0.0.5,192.168.24.16
+2019-04-08 07:00:35 | ++ export OS_USER_DOMAIN_NAME=Default
+2019-04-08 07:00:35 | ++ OS_USER_DOMAIN_NAME=Default
+2019-04-08 07:00:35 | ++ export OS_VOLUME_API_VERSION=3
+2019-04-08 07:00:35 | ++ OS_VOLUME_API_VERSION=3
+2019-04-08 07:00:35 | ++ export OS_CLOUDNAME=overcloud
+2019-04-08 07:00:35 | ++ OS_CLOUDNAME=overcloud
+2019-04-08 07:00:35 | ++ export OS_AUTH_URL=https://10.0.0.5:13000/v3
+2019-04-08 07:00:35 | ++ OS_AUTH_URL=https://10.0.0.5:13000/v3
+2019-04-08 07:00:35 | ++ export NOVA_VERSION=1.1
+2019-04-08 07:00:35 | ++ NOVA_VERSION=1.1
+2019-04-08 07:00:35 | ++ export OS_IMAGE_API_VERSION=2
+2019-04-08 07:00:35 | ++ OS_IMAGE_API_VERSION=2
+2019-04-08 07:00:35 | ++ export OS_PASSWORD=ET36Qna3CHDa8sXZSLsjAXBMO
+2019-04-08 07:00:35 | ++ OS_PASSWORD=ET36Qna3CHDa8sXZSLsjAXBMO
+2019-04-08 07:00:35 | ++ export OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 07:00:35 | ++ OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 07:00:35 | ++ export OS_IDENTITY_API_VERSION=3
+2019-04-08 07:00:35 | ++ OS_IDENTITY_API_VERSION=3
+2019-04-08 07:00:35 | ++ export OS_PROJECT_NAME=admin
+2019-04-08 07:00:35 | ++ OS_PROJECT_NAME=admin
+2019-04-08 07:00:35 | ++ export OS_AUTH_TYPE=password
+2019-04-08 07:00:35 | ++ OS_AUTH_TYPE=password
+2019-04-08 07:00:35 | ++ export 'PYTHONWARNINGS=ignore:Certificate has no, ignore:A true SSLContext object is not available'
+2019-04-08 07:00:35 | ++ PYTHONWARNINGS='ignore:Certificate has no, ignore:A true SSLContext object is not available'
+2019-04-08 07:00:35 | ++ '[' -z '' ']'
+2019-04-08 07:00:35 | ++ export PS1=
+2019-04-08 07:00:35 | ++ PS1=
+2019-04-08 07:00:35 | ++ export 'PS1=${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 07:00:35 | ++ PS1='${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 07:00:35 | ++ export CLOUDPROMPT_ENABLED=1
+2019-04-08 07:00:35 | ++ CLOUDPROMPT_ENABLED=1
+2019-04-08 07:00:35 | ++ openstack floating ip list -c ID -f value
+2019-04-08 07:00:38 | ++ openstack router list -c ID -f value
+2019-04-08 07:00:41 | ++ openstack router list -c ID -f value
+2019-04-08 07:00:44 | ++ openstack router list -c ID -f value
+2019-04-08 07:00:47 | ++ openstack port list -c ID -f value
+2019-04-08 07:00:49 | ++ openstack network list -c ID -f value
+2019-04-08 07:00:52 | + openstack network create public --external --provider-network-type flat --provider-physical-network datacentre
+2019-04-08 07:00:55 | +---------------------------+--------------------------------------+
+2019-04-08 07:00:55 | | Field                     | Value                                |
+2019-04-08 07:00:55 | +---------------------------+--------------------------------------+
+2019-04-08 07:00:55 | | admin_state_up            | UP                                   |
+2019-04-08 07:00:55 | | availability_zone_hints   |                                      |
+2019-04-08 07:00:55 | | availability_zones        |                                      |
+2019-04-08 07:00:55 | | created_at                | 2019-04-08T07:00:55Z                 |
+2019-04-08 07:00:55 | | description               |                                      |
+2019-04-08 07:00:55 | | dns_domain                | None                                 |
+2019-04-08 07:00:55 | | id                        | f05384a9-b4c3-4d12-8a7c-b0f3b1f6d253 |
+2019-04-08 07:00:55 | | ipv4_address_scope        | None                                 |
+2019-04-08 07:00:55 | | ipv6_address_scope        | None                                 |
+2019-04-08 07:00:55 | | is_default                | False                                |
+2019-04-08 07:00:55 | | is_vlan_transparent       | None                                 |
+2019-04-08 07:00:55 | | mtu                       | 1500                                 |
+2019-04-08 07:00:55 | | name                      | public                               |
+2019-04-08 07:00:55 | | port_security_enabled     | True                                 |
+2019-04-08 07:00:55 | | project_id                | 4a96c8202ad7496b944f55c7781ef527     |
+2019-04-08 07:00:55 | | provider:network_type     | flat                                 |
+2019-04-08 07:00:55 | | provider:physical_network | datacentre                           |
+2019-04-08 07:00:55 | | provider:segmentation_id  | None                                 |
+2019-04-08 07:00:55 | | qos_policy_id             | None                                 |
+2019-04-08 07:00:55 | | revision_number           | 2                                    |
+2019-04-08 07:00:55 | | router:external           | External                             |
+2019-04-08 07:00:55 | | segments                  | None                                 |
+2019-04-08 07:00:55 | | shared                    | False                                |
+2019-04-08 07:00:55 | | status                    | ACTIVE                               |
+2019-04-08 07:00:55 | | subnets                   |                                      |
+2019-04-08 07:00:55 | | tags                      |                                      |
+2019-04-08 07:00:55 | | updated_at                | 2019-04-08T07:00:55Z                 |
+2019-04-08 07:00:55 | +---------------------------+--------------------------------------+
+2019-04-08 07:00:55 | + openstack subnet create ext-subnet --allocation-pool start=192.168.24.100,end=192.168.24.120 --no-dhcp --gateway 192.168.24.1 --network public --subnet-range 192.168.24.0/24
+2019-04-08 07:00:59 | +-------------------+--------------------------------------+
+2019-04-08 07:00:59 | | Field             | Value                                |
+2019-04-08 07:00:59 | +-------------------+--------------------------------------+
+2019-04-08 07:00:59 | | allocation_pools  | 192.168.24.100-192.168.24.120        |
+2019-04-08 07:00:59 | | cidr              | 192.168.24.0/24                      |
+2019-04-08 07:00:59 | | created_at        | 2019-04-08T07:00:59Z                 |
+2019-04-08 07:00:59 | | description       |                                      |
+2019-04-08 07:00:59 | | dns_nameservers   |                                      |
+2019-04-08 07:00:59 | | enable_dhcp       | False                                |
+2019-04-08 07:00:59 | | gateway_ip        | 192.168.24.1                         |
+2019-04-08 07:00:59 | | host_routes       |                                      |
+2019-04-08 07:00:59 | | id                | c0d36186-4881-4226-b751-a53f86a6b7f7 |
+2019-04-08 07:00:59 | | ip_version        | 4                                    |
+2019-04-08 07:00:59 | | ipv6_address_mode | None                                 |
+2019-04-08 07:00:59 | | ipv6_ra_mode      | None                                 |
+2019-04-08 07:00:59 | | name              | ext-subnet                           |
+2019-04-08 07:00:59 | | network_id        | f05384a9-b4c3-4d12-8a7c-b0f3b1f6d253 |
+2019-04-08 07:00:59 | | project_id        | 4a96c8202ad7496b944f55c7781ef527     |
+2019-04-08 07:00:59 | | revision_number   | 0                                    |
+2019-04-08 07:00:59 | | segment_id        | None                                 |
+2019-04-08 07:00:59 | | service_types     |                                      |
+2019-04-08 07:00:59 | | subnetpool_id     | None                                 |
+2019-04-08 07:00:59 | | tags              |                                      |
+2019-04-08 07:00:59 | | updated_at        | 2019-04-08T07:00:59Z                 |
+2019-04-08 07:00:59 | +-------------------+--------------------------------------+
+2019-04-08 07:00:59 | + openstack role show Member
+2019-04-08 07:01:02 | + openstack role show creator
+2019-04-08 07:01:05 | No role with a name or ID of 'creator' exists.
+2019-04-08 07:01:05 | + openstack role create creator
+2019-04-08 07:01:07 | +-----------+----------------------------------+
+2019-04-08 07:01:07 | | Field     | Value                            |
+2019-04-08 07:01:07 | +-----------+----------------------------------+
+2019-04-08 07:01:07 | | domain_id | None                             |
+2019-04-08 07:01:07 | | id        | ee5150e9aa024a4a9384db532e709bbe |
+2019-04-08 07:01:07 | | name      | creator                          |
+2019-04-08 07:01:07 | +-----------+----------------------------------+
+2019-04-08 07:01:07 | + echo '========= Note: Executing tempest via a container =========='
+2019-04-08 07:01:07 | ========= Note: Executing tempest via a container ==========
+2019-04-08 07:01:07 | + cat
+2019-04-08 07:01:07 | + chmod +x /home/stack/tempest_container.sh
+2019-04-08 07:01:07 | + export TEMPEST_HOST_DATA=/var/lib/tempestdata
+2019-04-08 07:01:07 | + TEMPEST_HOST_DATA=/var/lib/tempestdata
+2019-04-08 07:01:07 | + '[' '!' -d /var/lib/tempestdata ']'
+2019-04-08 07:01:07 | + sudo cp /home/stack/overcloudrc /home/stack/skip_file /home/stack/tempest-deployer-input.conf /home/stack/tempest_container.sh /var/lib/tempestdata
+2019-04-08 07:01:07 | + export CONTAINER_BINARY=docker
+2019-04-08 07:01:07 | + CONTAINER_BINARY=docker
+2019-04-08 07:01:07 | + sudo docker pull 192.168.24.1:8787/tripleorocky/centos-binary-tempest:current-tripleo-rdo
+2019-04-08 07:01:08 | Trying to pull repository 192.168.24.1:8787/tripleorocky/centos-binary-tempest ... 
+2019-04-08 07:01:08 | current-tripleo-rdo: Pulling from 192.168.24.1:8787/tripleorocky/centos-binary-tempest
+2019-04-08 07:01:08 | Digest: sha256:c4604db69d230e475772e74d796d24d839809e52da7519b69bb04490e41bcdac
+2019-04-08 07:01:08 | Status: Image is up to date for 192.168.24.1:8787/tripleorocky/centos-binary-tempest:current-tripleo-rdo
+2019-04-08 07:01:08 | + sudo docker run --net=host -i -v /var/lib/tempestdata:/var/lib/tempest -e 'PYTHONWARNINGS=ignore:Certificate has no, ignore:A true SSLContext object is not available' -e CURL_CA_BUNDLE= --user=root -v /var/log/containers/tempest:/var/log/tempest 192.168.24.1:8787/tripleorocky/centos-binary-tempest:current-tripleo-rdo /usr/bin/bash -c 'set -e; /var/lib/tempest/tempest_container.sh'
+2019-04-08 07:01:08 | python2-keystone-tests-tempest-0.1.1-0.20180903192808.807bd94.el7.noarch
+2019-04-08 07:01:08 | python2-watcher-tests-tempest-1.0.0-0.20180906152230.8b78066.el7.noarch
+2019-04-08 07:01:08 | python2-designate-tests-tempest-0.5.1-0.20180831124607.b9a90df.el7.noarch
+2019-04-08 07:01:08 | python2-barbican-tests-tempest-0.1.0-0.20180828144800.b8bf147.el7.noarch
+2019-04-08 07:01:08 | python2-kuryr-tests-tempest-0.3.0-0.20180906153602.2f12fdd.el7.noarch
+2019-04-08 07:01:08 | python2-tempestconf-2.0.0-0.20180821043805.d7db90e.el7.noarch
+2019-04-08 07:01:08 | python2-telemetry-tests-tempest-0.2.0-0.20190222195250.7f0e315.el7.noarch
+2019-04-08 07:01:08 | openstack-tempest-all-19.0.0-0.20180914114331.8316f96.el7.noarch
+2019-04-08 07:01:08 | python2-tempest-19.0.0-0.20180914114331.8316f96.el7.noarch
+2019-04-08 07:01:08 | python2-manila-tests-tempest-0.1.1-0.20180830035250.4c91b6e.el7.noarch
+2019-04-08 07:01:08 | python2-cinder-tests-tempest-0.1.0-0.20180822115300.08a3851.el7.noarch
+2019-04-08 07:01:08 | python2-zaqar-tests-tempest-0.1.0-0.20180906151305.f6c761d.el7.noarch
+2019-04-08 07:01:08 | python2-patrole-tests-tempest-0.4.0-0.20180906153232.9ee07cf.el7.noarch
+2019-04-08 07:01:08 | python2-vitrage-tests-tempest-1.1.1-0.20180828092335.20d00dd.el7.noarch
+2019-04-08 07:01:08 | python2-heat-tests-tempest-0.2.1-0.20180829061906.ecf121c.el7.noarch
+2019-04-08 07:01:08 | python2-octavia-tests-tempest-0.2.0-0.20181127183811.70c06d8.el7.noarch
+2019-04-08 07:01:08 | python2-murano-tests-tempest-0.1.1-0.20180828114823.7cd2357.el7.noarch
+2019-04-08 07:01:08 | python2-horizon-tests-tempest-0.0.1-0.20180827134350.0a62253.el7.noarch
+2019-04-08 07:01:08 | python2-magnum-tests-tempest-0.1.0-0.20180828101501.cc0647c.el7.noarch
+2019-04-08 07:01:08 | python2-tripleo-common-tests-tempest-0.0.1-0.20180828152311.e3c05aa.el7.noarch
+2019-04-08 07:01:08 | python2-tempest-tests-19.0.0-0.20180914114331.8316f96.el7.noarch
+2019-04-08 07:01:08 | python2-sahara-tests-tempest-0.7.0-0.20180925152245.bb23a5b.el7.noarch
+2019-04-08 07:01:08 | python2-networking-l2gw-tests-tempest-0.0.1-0.20180823105723.bf9ce3b.el7.noarch
+2019-04-08 07:01:08 | python2-novajoin-tests-tempest-0.0.1-0.20180828184254.f657712.el7.noarch
+2019-04-08 07:01:08 | python-octavia-tests-tempest-golang-0.2.0-0.20181127183811.70c06d8.el7.x86_64
+2019-04-08 07:01:08 | python2-mistral-tests-tempest-0.1.0-0.20180828161104.0646dcc.el7.noarch
+2019-04-08 07:01:08 | python2-trove-tests-tempest-0.1.0-0.20180828121319.fa807b7.el7.noarch
+2019-04-08 07:01:08 | python2-ironic-tests-tempest-1.2.0-0.20180906151602.3dc8f79.el7.noarch
+2019-04-08 07:01:08 | python2-sahara-tempest-0.7.0-0.20180925152245.bb23a5b.el7.noarch
+2019-04-08 07:01:08 | openstack-tempest-19.0.0-0.20180914114331.8316f96.el7.noarch
+2019-04-08 07:01:08 | python2-neutron-tests-tempest-0.2.1-0.20180905004815.f785dd4.el7.noarch
+2019-04-08 07:01:08 | python2-ec2api-tests-tempest-0.1.1-0.20180828204312.20de6b5.el7.noarch
+2019-04-08 07:01:08 | python2-congress-tests-tempest-0.1.0-0.20180906152922.2840001.el7.noarch
+2019-04-08 07:01:08 | /var/lib/tempest/tempest /usr/share/openstack-tempest
+2019-04-08 07:01:10 | 2019-04-08 07:01:10.043 16 INFO tempest [-] Using tempest config file /etc/tempest/tempest.conf[00m
+2019-04-08 07:01:10 | /usr/share/openstack-tempest
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.372 36 INFO tempest [-] Using tempest config file /var/lib/tempest/tempest/etc/tempest.conf[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.483 36 DEBUG config_tempest.constants [-] Setting basic default values load_basic_defaults /usr/lib/python2.7/site-packages/config_tempest/main.py:76[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.483 36 DEBUG config_tempest.constants [-] Setting [network-feature-enabled] ipv6_subnet_attributes = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.484 36 DEBUG config_tempest.constants [-] Setting [auth] tempest_roles = _member_ set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.484 36 DEBUG config_tempest.constants [-] Setting [auth] admin_username = admin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.484 36 DEBUG config_tempest.constants [-] Setting [auth] admin_project_name = admin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.484 36 DEBUG config_tempest.constants [-] Setting [auth] admin_domain_name = Default set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.485 36 DEBUG config_tempest.constants [-] Setting [scenario] img_dir = etc set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.485 36 DEBUG config_tempest.constants [-] Setting [object-storage] reseller_admin_role = ResellerAdmin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.485 36 DEBUG config_tempest.constants [-] Setting [DEFAULT] debug = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.485 36 DEBUG config_tempest.constants [-] Setting [DEFAULT] use_stderr = false set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.485 36 DEBUG config_tempest.constants [-] Setting [DEFAULT] log_file = tempest.log set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.486 36 DEBUG config_tempest.constants [-] Setting [oslo-concurrency] lock_path = /tmp set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.486 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] live_migration = false set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.486 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] live_migrate_paused_instances = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.486 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] preserve_ports = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.487 36 DEBUG config_tempest.constants [-] Setting [identity] username = demo set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.487 36 DEBUG config_tempest.constants [-] Setting [identity] password = secrete set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.487 36 DEBUG config_tempest.constants [-] Setting [identity] project_name = demo set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.487 36 DEBUG config_tempest.constants [-] Setting [identity] alt_username = alt_demo set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.487 36 DEBUG config_tempest.constants [-] Setting [identity] alt_password = secrete set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.488 36 DEBUG config_tempest.constants [-] Setting [identity] alt_project_name = alt_demo set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.488 36 DEBUG config_tempest.constants [-] Setting [identity] disable_ssl_certificate_validation = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.488 36 DEBUG config_tempest.constants [-] Setting [image] image_path = http://download.cirros-cloud.net/0.3.6/cirros-0.3.6-x86_64-disk.img set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.488 36 INFO config_tempest.constants [-] Reading deployer input from file /var/lib/tempest/tempest-deployer-input.conf[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.488 36 INFO config_tempest.constants [-] Adding options from deployer-input file '/var/lib/tempest/tempest-deployer-input.conf'[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.489 36 DEBUG config_tempest.constants [-] Setting [auth] use_dynamic_credentials = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.490 36 DEBUG config_tempest.constants [-] Setting [compute] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.490 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] console_output = false set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.490 36 DEBUG config_tempest.constants [-] Setting [identity] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.491 36 DEBUG config_tempest.constants [-] Setting [image] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.491 36 DEBUG config_tempest.constants [-] Setting [network] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.491 36 DEBUG config_tempest.constants [-] Setting [object-storage] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.492 36 DEBUG config_tempest.constants [-] Setting [orchestration] stack_owner_role = swiftoperator set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.492 36 DEBUG config_tempest.constants [-] Setting [orchestration] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.492 36 DEBUG config_tempest.constants [-] Setting [volume] backend1_name = tripleo_iscsi set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.492 36 DEBUG config_tempest.constants [-] Setting [volume] region = regionOne set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.493 36 DEBUG config_tempest.constants [-] Setting [volume-feature-enabled] bootable = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.493 36 DEBUG config_tempest.constants [-] Setting [auth] admin_username = admin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.493 36 DEBUG config_tempest.constants [-] Setting [auth] admin_project_name = admin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.493 36 DEBUG config_tempest.constants [-] Setting [auth] admin_password = ET36Qna3CHDa8sXZSLsjAXBMO set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.494 36 DEBUG config_tempest.constants [-] Setting [identity] uri = https://10.0.0.5:13000/v3 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.494 36 DEBUG config_tempest.constants [-] Setting [DEFAULT] log_dir = /var/log/tempest set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.494 36 DEBUG config_tempest.constants [-] Setting [DEFAULT] log_file = tempest.log set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.494 36 DEBUG config_tempest.constants [-] Setting [auth] use_dynamic_credentials = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.495 36 DEBUG config_tempest.constants [-] Setting [auth] tempest_roles = Member set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.495 36 DEBUG config_tempest.constants [-] Setting [network-feature-enabled] port_security = true set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.495 36 DEBUG config_tempest.constants [-] Setting [network] tenant_network_cidr = 192.168.0.0/24 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.496 36 DEBUG config_tempest.constants [-] Setting [compute] build_timeout = 500 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.496 36 DEBUG config_tempest.constants [-] Setting [network] build_timeout = 500 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.496 36 DEBUG config_tempest.constants [-] Setting [volume] build_timeout = 500 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.497 36 DEBUG config_tempest.constants [-] Setting [service_available] aodh_plugin = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.497 36 DEBUG config_tempest.constants [-] Setting [orchestration] stack_owner_role = Member set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.497 36 DEBUG config_tempest.constants [-] Setting [identity] auth_version = v3 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.497 36 DEBUG config_tempest.constants [-] Setting [identity] uri_v3 = https://10.0.0.5:13000/v3 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:14 | /usr/lib/python2.7/site-packages/urllib3/connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+2019-04-08 07:01:14 |   InsecureRequestWarning)
+2019-04-08 07:01:14 | 2019-04-08 07:01:14.521 36 DEBUG config_tempest.constants [-] Setting [identity] uri_v3 = https://10.0.0.5:13000/v3 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:15 | 2019-04-08 07:01:15.147 36 INFO tempest.lib.common.rest_client [req-a307106a-594a-43f3-afac-61e66a7dac6b ] Request (main): 201 POST https://10.0.0.5:13000/v3/auth/tokens[00m
+2019-04-08 07:01:15 | 2019-04-08 07:01:15.456 36 INFO tempest.lib.common.rest_client [req-cad8ff91-e56f-479d-9df8-df325af45cb9 ] Request (main): 200 GET https://10.0.0.5:13000/v3/projects 0.303s[00m
+2019-04-08 07:01:15 | 2019-04-08 07:01:15.458 36 DEBUG config_tempest.constants [-] Setting [auth] admin_project_id = 4a96c8202ad7496b944f55c7781ef527 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:16 | 2019-04-08 07:01:16.642 36 INFO tempest.lib.common.rest_client [tx0cbe8b1857234f4eb0a67-005caaf1bc ] Request (main): 200 GET https://10.0.0.5:13808/healthcheck 0.011s[00m
+2019-04-08 07:01:16 | 2019-04-08 07:01:16.910 36 INFO tempest.lib.common.rest_client [req-63d0e082-3c6d-4b12-926e-273dc32026e3 ] Request (main): 200 GET https://10.0.0.5:13000/v3/roles 0.267s[00m
+2019-04-08 07:01:16 | 2019-04-08 07:01:16.911 36 INFO config_tempest.constants [-] Creating Member role[00m
+2019-04-08 07:01:17 | 2019-04-08 07:01:17.091 36 INFO tempest.lib.common.rest_client [req-9fe92d67-8faf-4362-93bc-5066e1d0d5a1 ] Request (main): 409 POST https://10.0.0.5:13000/v3/roles 0.179s[00m
+2019-04-08 07:01:17 | 2019-04-08 07:01:17.092 36 INFO config_tempest.constants [-] Role Member already exists[00m
+2019-04-08 07:01:17 | 2019-04-08 07:01:17.092 36 DEBUG config_tempest.constants [-] Setting [object-storage] operator_role = admin set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:17 | 2019-04-08 07:01:17.516 36 DEBUG config_tempest.constants [-] Setting [validation] image_ssh_user = cirros set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:18 | 2019-04-08 07:01:18.949 36 INFO tempest.lib.common.rest_client [req-363c4bb3-5408-4b5a-86e4-d3ab9c78d298 ] Request (main): 200 GET https://10.0.0.5:13292/v2/images 1.433s[00m
+2019-04-08 07:01:18 | 2019-04-08 07:01:18.950 36 DEBUG config_tempest.constants [-] Setting [image] http_image = http://download.cirros-cloud.net/0.3.6/cirros-0.3.6-x86_64-disk.img set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:19 | 2019-04-08 07:01:19.366 36 DEBUG config_tempest.constants [-] Option '[compute-feature-enabled] console_output = false' was defined by user, NOT overwriting into value 'True' set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:99[00m
+2019-04-08 07:01:19 | 2019-04-08 07:01:19.407 36 INFO tempest.lib.common.rest_client [req-9f7d5c7f-5aa3-4dde-868c-6d30d2e7a2e4 ] Request (main): 200 GET https://10.0.0.5:13774/v2.1/os-hosts 0.040s[00m
+2019-04-08 07:01:19 | 2019-04-08 07:01:19.413 36 INFO config_tempest.constants [-] Creating user 'demo' with project 'demo' and password 'secrete'[00m
+2019-04-08 07:01:19 | 2019-04-08 07:01:19.762 36 INFO tempest.lib.common.rest_client [req-24a817ee-d33f-4cc7-ac79-8a20c5be8f01 ] Request (main): 201 POST https://10.0.0.5:13000/v3/projects 0.348s[00m
+2019-04-08 07:01:20 | 2019-04-08 07:01:20.069 36 INFO tempest.lib.common.rest_client [req-c3fcaf2d-60cd-4bc1-9e3a-578d461e6e0a ] Request (main): 200 GET https://10.0.0.5:13000/v3/projects 0.306s[00m
+2019-04-08 07:01:20 | 2019-04-08 07:01:20.626 36 INFO tempest.lib.common.rest_client [req-e260c98b-61ae-4238-90cf-0ee717b20bf2 ] Request (main): 201 POST https://10.0.0.5:13000/v3/users 0.556s[00m
+2019-04-08 07:01:20 | 2019-04-08 07:01:20.627 36 INFO config_tempest.constants [-] Creating user 'alt_demo' with project 'alt_demo' and password 'secrete'[00m
+2019-04-08 07:01:20 | 2019-04-08 07:01:20.807 36 INFO tempest.lib.common.rest_client [req-25bae309-bf16-40a5-9c35-abcc4978c707 ] Request (main): 201 POST https://10.0.0.5:13000/v3/projects 0.180s[00m
+2019-04-08 07:01:21 | 2019-04-08 07:01:21.036 36 INFO tempest.lib.common.rest_client [req-53d97ce7-536d-4a3e-91df-feb9276e69ce ] Request (main): 200 GET https://10.0.0.5:13000/v3/projects 0.228s[00m
+2019-04-08 07:01:21 | 2019-04-08 07:01:21.583 36 INFO tempest.lib.common.rest_client [req-dbf07d1e-3c8c-4d3e-aa8f-f0cf643065e5 ] Request (main): 201 POST https://10.0.0.5:13000/v3/users 0.546s[00m
+2019-04-08 07:01:21 | 2019-04-08 07:01:21.875 36 INFO tempest.lib.common.rest_client [req-737ab4a4-4f05-4dbf-a77e-99bdf8cb0f40 ] Request (main): 200 GET https://10.0.0.5:13000/v3/projects 0.290s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.065 36 INFO tempest.lib.common.rest_client [req-585ab525-2172-424f-af94-f53939ec310c ] Request (main): 200 GET https://10.0.0.5:13000/v3/users 0.190s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.229 36 INFO tempest.lib.common.rest_client [req-617ec020-0a14-4357-bb38-102aa1d88230 ] Request (main): 200 GET https://10.0.0.5:13000/v3/roles 0.163s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.409 36 INFO tempest.lib.common.rest_client [req-d448e7f0-0afe-43b8-a780-4c3c445aa3d2 ] Request (main): 204 PUT https://10.0.0.5:13000/v3/projects/38cdc25f338446be9374cb5ee33e25a4/users/ab14512b6b5046339e9f93c7d3f7c5ea/roles/599c438af4b348beb57f94d6088bc583 0.179s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.410 36 DEBUG config_tempest.constants [-] User 'admin' was given the 'admin' role in project 'demo' give_role_to_user /usr/lib/python2.7/site-packages/config_tempest/users.py:85[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.453 36 INFO tempest.lib.common.rest_client [req-997fa87c-4965-4167-8020-f31a8fb094d6 ] Request (main): 200 GET https://10.0.0.5:13774/v2.1/flavors 0.038s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.459 36 INFO config_tempest.constants [-] Creating flavor 'm1.nano'[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.525 36 INFO tempest.lib.common.rest_client [req-9a79e2ad-f099-4a58-b715-330891d14c24 ] Request (main): 200 POST https://10.0.0.5:13774/v2.1/flavors 0.065s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.535 36 DEBUG config_tempest.constants [-] Setting [compute] flavor_ref = aa0bf69d-b97b-4102-b2b6-196ccdd3b28c set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.535 36 INFO config_tempest.constants [-] Creating flavor 'm1.micro'[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.568 36 INFO tempest.lib.common.rest_client [req-41e983bf-33d4-49ba-ab22-925fdd71c175 ] Request (main): 200 POST https://10.0.0.5:13774/v2.1/flavors 0.033s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.573 36 DEBUG config_tempest.constants [-] Setting [compute] flavor_ref_alt = 61435f99-eaf2-4de5-a115-55dadaf05757 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.573 36 DEBUG config_tempest.constants [-] Setting [scenario] img_file = cirros-0.3.6-x86_64-disk.img set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.618 36 INFO tempest.lib.common.rest_client [req-e9178825-8721-4627-a25b-afc843fedb26 ] Request (main): 200 GET https://10.0.0.5:13292/v2/images 0.044s[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.618 36 INFO config_tempest.constants [-] Creating image 'cirros-0.3.6-x86_64-disk.img'[00m
+2019-04-08 07:01:22 | 2019-04-08 07:01:22.618 36 INFO config_tempest.constants [-] Downloading 'http://download.cirros-cloud.net/0.3.6/cirros-0.3.6-x86_64-disk.img' and saving as 'etc/cirros-0.3.6-x86_64-disk.img'[00m
+2019-04-08 07:07:09 | 2019-04-08 07:07:09.408 36 INFO config_tempest.constants [-] Uploading image 'cirros-0.3.6-x86_64-disk.img' from '/var/lib/tempest/tempest/etc/cirros-0.3.6-x86_64-disk.img'[00m
+2019-04-08 07:07:09 | 2019-04-08 07:07:09.841 36 INFO tempest.lib.common.rest_client [req-b32d9665-085d-4d41-8e97-6263920b1758 ] Request (main): 201 POST https://10.0.0.5:13292/v2/images 0.432s[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.164 36 INFO tempest.lib.common.rest_client [req-52f02d61-8172-489e-b53d-392abcabf3bd ] Request (main): 204 PUT https://10.0.0.5:13292/v2/images/546c24a3-8329-4fa9-bf73-68d83cae4ddc/file 1.323s[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.201 36 INFO tempest.lib.common.rest_client [req-ac914bf0-eeb9-4ee6-b17b-526e5bf0f4f4 ] Request (main): 200 GET https://10.0.0.5:13292/v2/images 0.037s[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.202 36 INFO config_tempest.constants [-] Creating image 'cirros-0.3.6-x86_64-disk.img_alt'[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.202 36 INFO config_tempest.constants [-] Image 'http://download.cirros-cloud.net/0.3.6/cirros-0.3.6-x86_64-disk.img' already fetched to 'etc/cirros-0.3.6-x86_64-disk.img'.[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.202 36 INFO config_tempest.constants [-] Uploading image 'cirros-0.3.6-x86_64-disk.img_alt' from '/var/lib/tempest/tempest/etc/cirros-0.3.6-x86_64-disk.img'[00m
+2019-04-08 07:07:11 | 2019-04-08 07:07:11.244 36 INFO tempest.lib.common.rest_client [req-b1148abd-0f0e-472e-9859-d81ec7422b4c ] Request (main): 201 POST https://10.0.0.5:13292/v2/images 0.041s[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.454 36 INFO tempest.lib.common.rest_client [req-c987e9e8-69cd-4d39-85a0-fb3bb80f4c5d ] Request (main): 204 PUT https://10.0.0.5:13292/v2/images/7bb72cbd-a52e-49ae-9cd6-e0a17866fd45/file 1.209s[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.454 36 DEBUG config_tempest.constants [-] Setting [compute] image_ref = 546c24a3-8329-4fa9-bf73-68d83cae4ddc set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.454 36 DEBUG config_tempest.constants [-] Setting [compute] image_ref_alt = 7bb72cbd-a52e-49ae-9cd6-e0a17866fd45 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.454 36 INFO config_tempest.constants [-] Setting up network[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.455 36 DEBUG config_tempest.constants [-] Is neutron present: True create_tempest_networks /usr/lib/python2.7/site-packages/config_tempest/services/network.py:30[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.455 36 INFO config_tempest.constants [-] Looking for existing network id: f05384a9-b4c3-4d12-8a7c-b0f3b1f6d253[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.969 36 INFO tempest.lib.common.rest_client [req-f9f25d48-3df5-452d-aa95-406633e4b5db ] Request (main): 200 GET https://10.0.0.5:13696/v2.0/networks 0.513s[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.969 36 DEBUG config_tempest.constants [-] Setting [network] public_network_id = f05384a9-b4c3-4d12-8a7c-b0f3b1f6d253 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.970 36 DEBUG config_tempest.constants [-] Setting [network] floating_network_name = public set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:07:12 | 2019-04-08 07:07:12.970 36 INFO config_tempest.constants [-] No volume service found, skipping backup service check[00m
+2019-04-08 07:07:13 | 2019-04-08 07:07:13.256 36 INFO tempest.lib.common.rest_client [req-bf55629a-5594-4f61-87f1-bf8bcada92ff ] Request (main): 200 GET https://10.0.0.5:13000/v3/services?type=metering 0.285s[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.484 36 DEBUG config_tempest.constants [-] Setting [service_available] horizon = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.485 36 DEBUG config_tempest.constants [-] Setting [service_available] cinder = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.486 36 DEBUG config_tempest.constants [-] Setting [service_available] nova = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.486 36 DEBUG config_tempest.constants [-] Setting [service_available] neutron = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.488 36 DEBUG config_tempest.constants [-] Setting [service_available] trove = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.488 36 DEBUG config_tempest.constants [-] Setting [service_available] ceilometer = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.488 36 DEBUG config_tempest.constants [-] Setting [service_available] glance = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.489 36 DEBUG config_tempest.constants [-] Setting [service_available] manila = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.489 36 DEBUG config_tempest.constants [-] Setting [service_available] panko = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.490 36 DEBUG config_tempest.constants [-] Setting [service_available] ironic = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.490 36 DEBUG config_tempest.constants [-] Setting [service_available] mistral = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.490 36 DEBUG config_tempest.constants [-] Setting [service_available] heat = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.490 36 DEBUG config_tempest.constants [-] Setting [service_available] zaqar = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.490 36 DEBUG config_tempest.constants [-] Setting [service_available] swift = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.491 36 DEBUG config_tempest.constants [-] Setting [service_available] sahara = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.491 36 DEBUG config_tempest.constants [-] Setting [service_available] gnocchi = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.491 36 DEBUG config_tempest.constants [-] Setting [service_available] octavia = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.491 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] attach_encrypted_volume = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.491 36 DEBUG config_tempest.constants [-] Setting [identity-feature-enabled] api_v2 = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.492 36 DEBUG config_tempest.constants [-] Setting [identity-feature-enabled] api_v3 = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.492 36 DEBUG config_tempest.constants [-] Setting [image-feature-enabled] api_v1 = False set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.492 36 DEBUG config_tempest.constants [-] Setting [image-feature-enabled] api_v2 = True set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.514 36 DEBUG config_tempest.constants [-] Setting [identity-feature-enabled] api_extensions = s3tokens,OS-EP-FILTER,OS-REVOKE,OS-FEDERATION,OS-INHERIT,OS-SIMPLE-CERT,OS-TRUST,OS-PKI,OS-ENDPOINT-POLICY,OS-OAUTH1,OS-EC2 set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.514 36 DEBUG config_tempest.constants [-] Setting [object-storage-feature-enabled] discoverable_apis = formpost,bulk_delete,versioned_writes,container_quotas,tempurl,bulk_upload,s3api,ratelimit,slo,account_quotas,staticweb set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.514 36 DEBUG config_tempest.constants [-] Setting [network-feature-enabled] api_extensions = default-subnetpools,qos,availability_zone,network_availability_zone,auto-allocated-topology,ext-gw-mode,binding,agent,subnet_allocation,dhcp_agent_scheduler,trunk-details,address-scope,external-net,standard-attr-tag,flavors,segment,net-mtu,network-ip-availability,qos-default,quotas,revision-if-match,availability_zone_filter,l3-ha,filter-validation,subnet-segmentid-writable,multi-provider,quota_details,l2_adjacency,trunk,extraroute,net-mtu-writable,empty-string-filtering,subnet-service-types,port-mac-address-regenerate,standard-attr-timestamp,provider,service-type,qos-rule-type-details,l3-flavors,port-security,extra_dhcp_opt,port-security-groups-filtering,standard-attr-revisions,pagination,sorting,standard-attr-segment,segments-peer-subnet-host-routes,security-group,l3_agent_scheduler,fip-port-details,router_availability_zone,rbac-policies,project-id,qos-bw-limit-direction,standard-attr-description,ip-substring-filtering,router,allowed-address-pairs,ip_allocation,qos-fip,binding-extended set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.515 36 DEBUG config_tempest.constants [-] Setting [compute-feature-enabled] api_extensions = NMN,OS-DCF,OS-EXT-AZ,OS-EXT-IMG-SIZE,OS-EXT-IPS,OS-EXT-IPS-MAC,OS-EXT-SRV-ATTR,OS-EXT-STS,OS-FLV-DISABLED,OS-FLV-EXT-DATA,OS-SCH-HNT,OS-SRV-USG,os-access-ips,os-admin-actions,os-admin-password,os-agents,os-aggregates,os-assisted-volume-snapshots,os-attach-interfaces,os-availability-zone,os-baremetal-ext-status,os-baremetal-nodes,os-block-device-mapping,os-block-device-mapping-v2-boot,os-cell-capacities,os-cells,os-certificates,os-cloudpipe,os-cloudpipe-update,os-config-drive,os-console-auth-tokens,os-console-output,os-consoles,os-create-backup,os-create-server-ext,os-deferred-delete,os-evacuate,os-extended-evacuate-find-host,os-extended-floating-ips,os-extended-hypervisors,os-extended-networks,os-extended-quotas,os-extended-rescue-with-image,os-extended-services,os-extended-services-delete,os-extended-status,os-extended-volumes,os-fixed-ips,os-flavor-access,os-flavor-extra-specs,os-flavor-manage,os-flavor-rxtx,os-flavor-swap,os-floating-ip-dns,os-floating-ip-pools,os-floating-ips,os-floating-ips-bulk,os-fping,os-hide-server-addresses,os-hosts,os-hypervisor-status,os-hypervisors,os-instance-actions,os-instance_usage_audit_log,os-keypairs,os-lock-server,os-migrate-server,os-migrations,os-multiple-create,os-networks,os-networks-associate,os-pause-server,os-personality,os-preserve-ephemeral-rebuild,os-quota-class-sets,os-quota-sets,os-rescue,os-security-group-default-rules,os-security-groups,os-server-diagnostics,os-server-external-events,os-server-group-quotas,os-server-groups,os-server-list-multi-status,os-server-password,os-server-sort-keys,os-server-start-stop,os-services,os-shelve,os-simple-tenant-usage,os-suspend-server,os-tenant-networks,os-used-limits,os-used-limits-for-admin,os-user-data,os-user-quotas,os-virtual-interfaces,os-volume-attachment-update,os-volumes set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.515 36 INFO config_tempest.constants [-] Removing configuration: {'network-feature-enabled.api_extensions': ['dvr']}[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.515 36 DEBUG config_tempest.constants [-] Setting [network-feature-enabled] api_extensions = default-subnetpools,qos,availability_zone,network_availability_zone,auto-allocated-topology,ext-gw-mode,binding,agent,subnet_allocation,dhcp_agent_scheduler,trunk-details,address-scope,external-net,standard-attr-tag,flavors,segment,net-mtu,network-ip-availability,qos-default,quotas,revision-if-match,availability_zone_filter,l3-ha,filter-validation,subnet-segmentid-writable,multi-provider,quota_details,l2_adjacency,trunk,extraroute,net-mtu-writable,empty-string-filtering,subnet-service-types,port-mac-address-regenerate,standard-attr-timestamp,provider,service-type,qos-rule-type-details,l3-flavors,port-security,extra_dhcp_opt,port-security-groups-filtering,standard-attr-revisions,pagination,sorting,standard-attr-segment,segments-peer-subnet-host-routes,security-group,l3_agent_scheduler,fip-port-details,router_availability_zone,rbac-policies,project-id,qos-bw-limit-direction,standard-attr-description,ip-substring-filtering,router,allowed-address-pairs,ip_allocation,qos-fip,binding-extended set /usr/lib/python2.7/site-packages/config_tempest/tempest_conf.py:103[00m
+2019-04-08 07:09:20 | 2019-04-08 07:09:20.515 36 INFO config_tempest.constants [-] Creating configuration file /var/lib/tempest/tempest/etc/tempest.conf[00m
+2019-04-08 07:09:21 | +--------------------------------+-----------------------------------------------------------------+
+2019-04-08 07:09:21 | |              Name              |                            EntryPoint                           |
+2019-04-08 07:09:21 | +--------------------------------+-----------------------------------------------------------------+
+2019-04-08 07:09:21 | |          zaqar_tests           |          zaqar_tempest_plugin.plugin:ZaqarTempestPlugin         |
+2019-04-08 07:09:21 | |         watcher_tests          |        watcher_tempest_plugin.plugin:WatcherTempestPlugin       |
+2019-04-08 07:09:21 | |         vitrage_tests          |        vitrage_tempest_plugin.plugin:VitrageTempestPlugin       |
+2019-04-08 07:09:21 | |          trove_tests           |          trove_tempest_plugin.plugin:TroveTempestPlugin         |
+2019-04-08 07:09:21 | |      tripleo_common_tests      | tripleo_common_tempest_plugin.plugin:TripleOCommonTempestPlugin |
+2019-04-08 07:09:21 | |            horizon             |           tempest_horizon.plugin:HorizonTempestPlugin           |
+2019-04-08 07:09:21 | |        telemetry_tests         |      telemetry_tempest_plugin.plugin:TelemetryTempestPlugin     |
+2019-04-08 07:09:21 | |      sahara_tempest_tests      |         sahara_tempest_plugin.plugin:SaharaTempestPlugin        |
+2019-04-08 07:09:21 | |         patrole_tests          |        patrole_tempest_plugin.plugin:PatroleTempestPlugin       |
+2019-04-08 07:09:21 | |     octavia-tempest-plugin     |        octavia_tempest_plugin.plugin:OctaviaTempestPlugin       |
+2019-04-08 07:09:21 | |         novajoin_tests         |       novajoin_tempest_plugin.plugin:NovajoinTempestPlugin      |
+2019-04-08 07:09:21 | |         neutron_tests          |        neutron_tempest_plugin.plugin:NeutronTempestPlugin       |
+2019-04-08 07:09:21 | | networking_l2gw_tempest_plugin |  networking_l2gw_tempest_plugin.plugin:NeutronL2gwTempestPlugin |
+2019-04-08 07:09:21 | |          murano_tests          |         murano_tempest_tests.plugin:MuranoTempestPlugin         |
+2019-04-08 07:09:21 | |          mistral_test          |        mistral_tempest_tests.plugin:MistralTempestPlugin        |
+2019-04-08 07:09:21 | |          manila_tests          |         manila_tempest_tests.plugin:ManilaTempestPlugin         |
+2019-04-08 07:09:21 | |          magnum_tests          |         magnum_tempest_plugin.plugin:MagnumTempestPlugin        |
+2019-04-08 07:09:21 | |      kuryr_tempest_tests       |          kuryr_tempest_plugin.plugin:KuryrTempestPlugin         |
+2019-04-08 07:09:21 | |         keystone_tests         |       keystone_tempest_plugin.plugin:KeystoneTempestPlugin      |
+2019-04-08 07:09:21 | |          ironic_tests          |         ironic_tempest_plugin.plugin:IronicTempestPlugin        |
+2019-04-08 07:09:21 | |              heat              |           heat_tempest_plugin.plugin:HeatTempestPlugin          |
+2019-04-08 07:09:21 | |           aws_tests            |          ec2api_tempest_plugin.plugin:AWSTempestPlugin          |
+2019-04-08 07:09:21 | |           designate            |      designate_tempest_plugin.plugin:DesignateTempestPlugin     |
+2019-04-08 07:09:21 | |         congress_tests         |       congress_tempest_plugin.plugin:CongressTempestPlugin      |
+2019-04-08 07:09:21 | |          cinder_tests          |         cinder_tempest_plugin.plugin:CinderTempestPlugin        |
+2019-04-08 07:09:21 | |         barbican_tests         |       barbican_tempest_plugin.plugin:BarbicanTempestPlugin      |
+2019-04-08 07:09:21 | +--------------------------------+-----------------------------------------------------------------+
+2019-04-08 07:09:28 | Initializing saved state.
+2019-04-08 07:09:46 | {2} setUpClass (tempest.api.compute.admin.test_auto_allocate_network.AutoAllocateNetworkTest) ... SKIPPED: The microversion range[2.37 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:10:02 | {3} tempest.api.compute.admin.test_availability_zone.AZAdminV2TestJSON.test_get_availability_zone_list [1.143054s] ... ok
+2019-04-08 07:10:02 | {3} tempest.api.compute.admin.test_availability_zone.AZAdminV2TestJSON.test_get_availability_zone_list_detail [0.148280s] ... ok
+2019-04-08 07:10:09 | {0} tempest.api.compute.admin.test_agents.AgentsAdminTestJSON.test_create_agent [3.009193s] ... ok
+2019-04-08 07:10:09 | {3} setUpClass (tempest.api.compute.admin.test_fixed_ips.FixedIPsTestJson) ... SKIPPED: FixedIPsTestJson skipped as neutron is available
+2019-04-08 07:10:09 | {3} setUpClass (tempest.api.compute.admin.test_fixed_ips_negative.FixedIPsNegativeTestJson) ... SKIPPED: FixedIPsNegativeTestJson skipped as neutron is available
+2019-04-08 07:10:10 | {2} tempest.api.compute.admin.test_hosts.HostsAdminTestJSON.test_list_hosts [0.919275s] ... ok
+2019-04-08 07:10:11 | {2} tempest.api.compute.admin.test_hosts.HostsAdminTestJSON.test_list_hosts_with_a_blank_zone [1.241512s] ... ok
+2019-04-08 07:10:11 | {2} tempest.api.compute.admin.test_hosts.HostsAdminTestJSON.test_list_hosts_with_nonexistent_zone [0.059262s] ... ok
+2019-04-08 07:10:11 | {0} tempest.api.compute.admin.test_agents.AgentsAdminTestJSON.test_delete_agent [2.055074s] ... ok
+2019-04-08 07:10:11 | {0} tempest.api.compute.admin.test_agents.AgentsAdminTestJSON.test_list_agents [0.083590s] ... ok
+2019-04-08 07:10:11 | {0} tempest.api.compute.admin.test_agents.AgentsAdminTestJSON.test_list_agents_with_filter [0.237902s] ... ok
+2019-04-08 07:10:12 | {0} tempest.api.compute.admin.test_agents.AgentsAdminTestJSON.test_update_agent [0.194770s] ... ok
+2019-04-08 07:10:24 | {3} tempest.api.compute.admin.test_flavors_access.FlavorsAccessTestJSON.test_flavor_access_add_remove [3.918658s] ... ok
+2019-04-08 07:10:25 | {3} tempest.api.compute.admin.test_flavors_access.FlavorsAccessTestJSON.test_flavor_access_list_with_private_flavor [0.200530s] ... ok
+2019-04-08 07:10:28 | {0} tempest.api.compute.admin.test_availability_zone_negative.AZAdminNegativeTestJSON.test_get_availability_zone_list_detail_with_non_admin_user [0.611413s] ... ok
+2019-04-08 07:10:30 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_add_host_create_server_with_az [23.246497s] ... ok
+2019-04-08 07:10:31 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_add_host_get_details [0.481822s] ... ok
+2019-04-08 07:10:31 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_add_host_list [0.585026s] ... ok
+2019-04-08 07:10:32 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_add_remove_host [0.390020s] ... ok
+2019-04-08 07:10:32 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_create_delete [0.317194s] ... ok
+2019-04-08 07:10:32 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_add_existent_host [23.127398s] ... ok
+2019-04-08 07:10:33 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_create_delete_with_az [1.492351s] ... ok
+2019-04-08 07:10:33 | {2} tempest.api.compute.admin.test_hosts.HostsAdminTestJSON.test_list_hosts_with_zone [22.359412s] ... ok
+2019-04-08 07:10:34 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_add_host_as_user [1.337503s] ... ok
+2019-04-08 07:10:34 | {2} tempest.api.compute.admin.test_hosts.HostsAdminTestJSON.test_show_host_detail [0.215676s] ... ok
+2019-04-08 07:10:34 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_add_non_exist_host [0.259216s] ... ok
+2019-04-08 07:10:34 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_create_aggregate_name_length_exceeds_255 [0.023911s] ... ok
+2019-04-08 07:10:34 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_create_update_metadata_get_details [0.426406s] ... ok
+2019-04-08 07:10:34 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_create_aggregate_name_length_less_than_1 [0.056689s] ... ok
+2019-04-08 07:10:34 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_create_as_user [0.067719s] ... ok
+2019-04-08 07:10:34 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_create_update_with_az [0.619994s] ... ok
+2019-04-08 07:10:35 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_create_with_existent_aggregate_name [0.603238s] ... ok
+2019-04-08 07:10:35 | {1} tempest.api.compute.admin.test_aggregates.AggregatesAdminTestJSON.test_aggregate_create_verify_entry_in_list [0.347134s] ... ok
+2019-04-08 07:10:35 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_delete_as_user [0.358639s] ... ok
+2019-04-08 07:10:35 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_delete_with_invalid_id [0.488884s] ... ok
+2019-04-08 07:10:36 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_get_details_as_user [0.505187s] ... ok
+2019-04-08 07:10:36 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_get_details_with_invalid_id [0.050793s] ... ok
+2019-04-08 07:10:36 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_list_as_user [0.040127s] ... ok
+2019-04-08 07:10:37 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_remove_host_as_user [1.041002s] ... ok
+2019-04-08 07:10:37 | {4} tempest.api.compute.admin.test_aggregates_negative.AggregatesAdminNegativeTestJSON.test_aggregate_remove_nonexistent_host [0.277765s] ... ok
+2019-04-08 07:10:46 | {1} setUpClass (tempest.api.compute.admin.test_aggregates.AggregatesAdminTestV241) ... SKIPPED: The microversion range[2.41 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_get_nonexistent_key [1.224396s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_non_admin_set_keys [0.028425s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_non_admin_unset_keys [0.082394s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_non_admin_update_specific_key [0.082868s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_unset_nonexistent_key [0.034070s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_update_mismatch_key [0.024973s] ... ok
+2019-04-08 07:10:51 | {3} tempest.api.compute.admin.test_flavors_extra_specs_negative.FlavorsExtraSpecsNegativeTestJSON.test_flavor_update_more_key [0.019882s] ... ok
+2019-04-08 07:10:56 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_flavor_using_string_ram [1.952255s] ... ok
+2019-04-08 07:10:56 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_flavor_verify_entry_in_list_details [0.157382s] ... ok
+2019-04-08 07:10:56 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_flavor_with_int_id [0.121079s] ... ok
+2019-04-08 07:10:56 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_flavor_with_none_id [0.120299s] ... ok
+2019-04-08 07:10:57 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_flavor_with_uuid_id [0.143285s] ... ok
+2019-04-08 07:10:58 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_list_flavor_without_extra_data [1.636090s] ... ok
+2019-04-08 07:10:59 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_create_server_with_non_public_flavor [0.345197s] ... ok
+2019-04-08 07:10:59 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_is_public_string_variations [0.897378s] ... ok
+2019-04-08 07:11:00 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_list_non_public_flavor [0.297640s] ... ok
+2019-04-08 07:11:00 | {0} tempest.api.compute.admin.test_flavors.FlavorsAdminTestJSON.test_list_public_flavor_with_other_user [0.324519s] ... ok
+2019-04-08 07:11:06 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminTestJSON.test_get_hypervisor_list [3.033062s] ... ok
+2019-04-08 07:11:06 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminTestJSON.test_get_hypervisor_list_details [0.107994s] ... ok
+2019-04-08 07:11:06 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminTestJSON.test_get_hypervisor_show_details [0.225516s] ... ok
+2019-04-08 07:11:06 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminTestJSON.test_get_hypervisor_stats [0.065562s] ... ok
+2019-04-08 07:11:07 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminTestJSON.test_get_hypervisor_uptime [0.444417s] ... ok
+2019-04-08 07:11:39 | {3} tempest.api.compute.admin.test_instance_usage_audit_log_negative.InstanceUsageAuditLogNegativeTestJSON.test_get_instance_usage_audit_logs_with_invalid_time [3.383318s] ... ok
+2019-04-08 07:11:40 | {1} tempest.api.compute.admin.test_create_server.ServersWithSpecificFlavorTestJSON.test_verify_created_server_ephemeral_disk ... SKIPPED: Instance validation tests are disabled.
+2019-04-08 07:11:42 | {4} tempest.api.compute.admin.test_delete_server.DeleteServersAdminTestJSON.test_admin_delete_servers_of_others [27.198121s] ... ok
+2019-04-08 07:11:42 | {3} tempest.api.compute.admin.test_instance_usage_audit_log_negative.InstanceUsageAuditLogNegativeTestJSON.test_instance_usage_audit_logs_with_nonadmin_user [2.925459s] ... ok
+2019-04-08 07:11:55 | {4} tempest.api.compute.admin.test_delete_server.DeleteServersAdminTestJSON.test_delete_server_while_in_error_state [12.794325s] ... ok
+2019-04-08 07:11:56 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminUnderV252Test.test_get_hypervisor_show_servers [3.841248s] ... ok
+2019-04-08 07:11:59 | {2} tempest.api.compute.admin.test_hypervisor.HypervisorAdminUnderV252Test.test_search_hypervisor [2.834237s] ... ok
+2019-04-08 07:12:01 | {0} tempest.api.compute.admin.test_flavors_access_negative.FlavorsAccessNegativeTestJSON.test_add_flavor_access_duplicate [6.037575s] ... ok
+2019-04-08 07:12:01 | {0} tempest.api.compute.admin.test_flavors_access_negative.FlavorsAccessNegativeTestJSON.test_flavor_access_list_with_public_flavor [0.315578s] ... ok
+2019-04-08 07:12:02 | {0} tempest.api.compute.admin.test_flavors_access_negative.FlavorsAccessNegativeTestJSON.test_flavor_non_admin_add [1.437947s] ... ok
+2019-04-08 07:12:04 | {0} tempest.api.compute.admin.test_flavors_access_negative.FlavorsAccessNegativeTestJSON.test_flavor_non_admin_remove [2.054628s] ... ok
+2019-04-08 07:12:05 | {0} tempest.api.compute.admin.test_flavors_access_negative.FlavorsAccessNegativeTestJSON.test_remove_flavor_access_not_found [0.874484s] ... ok
+2019-04-08 07:12:22 | {1} setUpClass (tempest.api.compute.admin.test_flavors_microversions.FlavorsV255TestJSON) ... SKIPPED: The microversion range[2.55 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:12:22 | {1} setUpClass (tempest.api.compute.admin.test_flavors_microversions.FlavorsV261TestJSON) ... SKIPPED: The microversion range[2.61 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:12:22 | {1} setUpClass (tempest.api.compute.admin.test_live_migration_negative.LiveMigrationNegativeTest) ... SKIPPED: Live migration is not enabled
+2019-04-08 07:12:35 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_get_hypervisor_list_details_with_non_admin_user [1.163907s] ... ok
+2019-04-08 07:12:37 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_create_server_with_scheduling_hint [5.955176s] ... ok
+2019-04-08 07:12:37 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_get_hypervisor_list_with_non_admin_user [1.079455s] ... ok
+2019-04-08 07:12:37 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_get_hypervisor_stats_with_non_admin_user [0.825252s] ... ok
+2019-04-08 07:12:37 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_by_admin [0.832120s] ... ok
+2019-04-08 07:12:39 | {4} tempest.api.compute.admin.test_flavors_extra_specs.FlavorsExtraSpecsTestJSON.test_flavor_non_admin_get_all_keys [2.117096s] ... ok
+2019-04-08 07:12:40 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_by_admin_with_all_tenants [2.403968s] ... ok
+2019-04-08 07:12:40 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_get_hypervisor_uptime_with_non_admin_user [2.447712s] ... ok
+2019-04-08 07:12:41 | {4} tempest.api.compute.admin.test_flavors_extra_specs.FlavorsExtraSpecsTestJSON.test_flavor_non_admin_get_specific_key [2.691842s] ... ok
+2019-04-08 07:12:41 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_get_nonexistent_hypervisor_uptime [1.401870s] ... ok
+2019-04-08 07:12:41 | {1} tempest.api.compute.admin.test_networks.NetworksTest.test_get_network [1.988671s] ... ok
+2019-04-08 07:12:42 | {1} tempest.api.compute.admin.test_networks.NetworksTest.test_list_all_networks [0.610077s] ... ok
+2019-04-08 07:12:42 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_by_admin_with_specified_tenant [2.385344s] ... ok
+2019-04-08 07:12:42 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_show_hypervisor_with_non_admin_user [0.961436s] ... ok
+2019-04-08 07:12:42 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_detailed_filter_by_invalid_status [0.048724s] ... ok
+2019-04-08 07:12:42 | {2} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeTestJSON.test_show_nonexistent_hypervisor [0.072665s] ... ok
+2019-04-08 07:12:43 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_filter_by_error_status [0.917362s] ... ok
+2019-04-08 07:12:43 | {4} tempest.api.compute.admin.test_flavors_extra_specs.FlavorsExtraSpecsTestJSON.test_flavor_set_get_update_show_unset_keys [1.941827s] ... ok
+2019-04-08 07:12:44 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_list_servers_filter_by_exist_host [0.432291s] ... ok
+2019-04-08 07:12:46 | {0} setUpClass (tempest.api.compute.admin.test_floating_ips_bulk.FloatingIPsBulkAdminTestJSON) ... SKIPPED: nova-network is gone
+2019-04-08 07:12:51 | {1} setUpClass (tempest.api.compute.admin.test_quotas.QuotasAdminTestV236) ... SKIPPED: The microversion range[2.36 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:12:55 | {2} setUpClass (tempest.api.compute.admin.test_keypairs_v210.KeyPairsV210TestJSON) ... SKIPPED: The microversion range[2.10 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:13:08 | {0} tempest.api.compute.admin.test_instance_usage_audit_log.InstanceUsageAuditLogTestJSON.test_get_instance_usage_audit_log [0.812873s] ... ok
+2019-04-08 07:13:08 | {0} tempest.api.compute.admin.test_instance_usage_audit_log.InstanceUsageAuditLogTestJSON.test_list_instance_usage_audit_logs [0.193402s] ... ok
+2019-04-08 07:13:09 | {1} tempest.api.compute.admin.test_quotas_negative.QuotasSecurityGroupAdminNegativeTest.test_security_groups_exceed_limit ... SKIPPED: Skipped until bug: https://launchpad.net/bugs/1186354 is resolved.
+2019-04-08 07:13:09 | {1} tempest.api.compute.admin.test_quotas_negative.QuotasSecurityGroupAdminNegativeTest.test_security_groups_rules_exceed_limit ... SKIPPED: Skipped until bug: https://launchpad.net/bugs/1186354 is resolved.
+2019-04-08 07:13:13 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_rebuild_server_in_error_state [29.628795s] ... ok
+2019-04-08 07:13:15 | {0} setUpClass (tempest.api.compute.admin.test_live_migration.LiveAutoBlockMigrationV225Test) ... SKIPPED: The microversion range[2.25 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:13:15 | {0} setUpClass (tempest.api.compute.admin.test_live_migration.LiveMigrationTest) ... SKIPPED: LiveMigrationTest skipped as live-migration is not available
+2019-04-08 07:13:16 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_list_hosts_with_non_admin_user [1.758762s] ... ok
+2019-04-08 07:13:16 | {1} setUpClass (tempest.api.compute.admin.test_security_group_default_rules.SecurityGroupDefaultRulesTest) ... SKIPPED: Skip as this functionality is not yet implemented in Neutron. Related Bug#1311500
+2019-04-08 07:13:19 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_reboot_host_with_non_admin_user [3.390846s] ... ok
+2019-04-08 07:13:20 | {2} tempest.api.compute.admin.test_quotas_negative.QuotasAdminNegativeTest.test_create_server_when_cpu_quota_is_full [9.465636s] ... ok
+2019-04-08 07:13:20 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_reboot_nonexistent_host [1.177985s] ... ok
+2019-04-08 07:13:21 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_show_host_detail_with_non_admin_user [0.509633s] ... ok
+2019-04-08 07:13:22 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_show_host_detail_with_nonexistent_hostname [0.642403s] ... ok
+2019-04-08 07:13:22 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_shutdown_host_with_non_admin_user [0.078238s] ... ok
+2019-04-08 07:13:22 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_reset_network_inject_network_info [8.585243s] ... ok
+2019-04-08 07:13:22 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_shutdown_nonexistent_host [0.161699s] ... ok
+2019-04-08 07:13:22 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_startup_host_with_non_admin_user [0.327843s] ... ok
+2019-04-08 07:13:22 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_startup_nonexistent_host [0.202348s] ... ok
+2019-04-08 07:13:23 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_update_host_with_invalid_maintenance_mode [0.258177s] ... ok
+2019-04-08 07:13:23 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_update_host_with_invalid_status [0.512793s] ... ok
+2019-04-08 07:13:23 | {3} tempest.api.compute.admin.test_servers.ServersAdminTestJSON.test_reset_state_server [1.316925s] ... ok
+2019-04-08 07:13:24 | {2} tempest.api.compute.admin.test_quotas_negative.QuotasAdminNegativeTest.test_create_server_when_instances_quota_is_full [3.412920s] ... ok
+2019-04-08 07:13:24 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_update_host_with_non_admin_user [0.975744s] ... ok
+2019-04-08 07:13:25 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_update_host_without_param [1.144211s] ... ok
+2019-04-08 07:13:26 | {4} tempest.api.compute.admin.test_hosts_negative.HostsAdminNegativeTestJSON.test_update_nonexistent_host [1.160928s] ... ok
+2019-04-08 07:13:29 | {2} tempest.api.compute.admin.test_quotas_negative.QuotasAdminNegativeTest.test_create_server_when_memory_quota_is_full [4.993631s] ... ok
+2019-04-08 07:13:29 | {2} tempest.api.compute.admin.test_quotas_negative.QuotasAdminNegativeTest.test_update_quota_normal_user [0.612967s] ... ok
+2019-04-08 07:13:31 | {0} tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_cold_migration ... SKIPPED: Less than 2 compute nodes, skipping multinode tests.
+2019-04-08 07:13:32 | {0} tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations [1.369300s] ... ok
+2019-04-08 07:13:32 | {0} tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_list_migrations_in_flavor_resize_situation ... SKIPPED: Resize not available.
+2019-04-08 07:13:32 | {0} tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_resize_server_revert_deleted_flavor ... SKIPPED: Resize not available.
+2019-04-08 07:13:32 | {0} tempest.api.compute.admin.test_migrations.MigrationsAdminTest.test_revert_cold_migration ... SKIPPED: Less than 2 compute nodes, skipping multinode tests.
+2019-04-08 07:13:45 | {1} tempest.api.compute.admin.test_server_diagnostics.ServerDiagnosticsTest.test_get_server_diagnostics [11.135594s] ... ok
+2019-04-08 07:13:55 | {1} setUpClass (tempest.api.compute.admin.test_server_diagnostics.ServerDiagnosticsV248Test) ... SKIPPED: The microversion range[2.48 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:13:59 | {4} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeUnderV252Test.test_search_hypervisor_with_non_admin_user [2.056823s] ... ok
+2019-04-08 07:13:59 | {4} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeUnderV252Test.test_search_nonexistent_hypervisor [0.039760s] ... ok
+2019-04-08 07:13:59 | {4} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeUnderV252Test.test_show_servers_with_non_admin_user [0.101400s] ... ok
+2019-04-08 07:13:59 | {4} tempest.api.compute.admin.test_hypervisor_negative.HypervisorAdminNegativeUnderV252Test.test_show_servers_with_nonexistent_hypervisor [0.053079s] ... ok
+2019-04-08 07:14:05 | {4} setUpClass (tempest.api.compute.admin.test_live_migration.LiveMigrationRemoteConsolesV26Test) ... SKIPPED: The microversion range[2.6 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:14:07 | {2} tempest.api.compute.admin.test_server_diagnostics_negative.ServerDiagnosticsNegativeTest.test_get_server_diagnostics_by_non_admin [8.782151s] ... ok
+2019-04-08 07:14:07 | {0} tempest.api.compute.admin.test_quotas.QuotaClassesAdminTestJSON.test_update_default_quotas [7.575634s] ... ok
+2019-04-08 07:14:12 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_migrate_non_existent_server [0.846688s] ... ok
+2019-04-08 07:14:14 | {0} setUpClass (tempest.api.compute.admin.test_quotas.QuotasAdminTestV257) ... SKIPPED: The microversion range[2.57 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:14:17 | {2} setUpClass (tempest.api.compute.admin.test_servers_on_multinodes.ServersOnMultiNodesTest) ... SKIPPED: Less than 2 compute nodes, skipping multi-nodes test.
+2019-04-08 07:14:17 | {2} setUpClass (tempest.api.compute.admin.test_volume_swap.TestVolumeSwap) ... SKIPPED: Swapping volumes is not supported.
+2019-04-08 07:14:17 | {2} setUpClass (tempest.api.compute.admin.test_volumes_negative.VolumesAdminNegativeTest) ... SKIPPED: VolumesAdminNegativeTest skipped as Cinder is not available
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_migrate_server_invalid_state [7.988884s] ... ok
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_reset_state_server_invalid_state [0.035075s] ... ok
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_reset_state_server_invalid_type [0.028656s] ... ok
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_reset_state_server_nonexistent_server [0.028863s] ... ok
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_resize_server_using_overlimit_ram ... SKIPPED: Resize not available.
+2019-04-08 07:14:20 | {3} tempest.api.compute.admin.test_servers_negative.ServersAdminNegativeTestJSON.test_resize_server_using_overlimit_vcpus ... SKIPPED: Resize not available.
+2019-04-08 07:14:24 | {4} tempest.api.compute.admin.test_quotas.QuotasAdminTestJSON.test_delete_quota [4.685499s] ... ok
+2019-04-08 07:14:25 | {4} tempest.api.compute.admin.test_quotas.QuotasAdminTestJSON.test_get_default_quotas [0.661631s] ... ok
+2019-04-08 07:14:34 | {0} tempest.api.compute.admin.test_simple_tenant_usage.TenantUsagesTestJSON.test_get_usage_tenant [1.015790s] ... ok
+2019-04-08 07:14:34 | {0} tempest.api.compute.admin.test_simple_tenant_usage.TenantUsagesTestJSON.test_get_usage_tenant_with_non_admin_user [0.088918s] ... ok
+2019-04-08 07:14:34 | {0} tempest.api.compute.admin.test_simple_tenant_usage.TenantUsagesTestJSON.test_list_usage_all_tenants [0.130518s] ... ok
+2019-04-08 07:14:36 | {4} tempest.api.compute.admin.test_quotas.QuotasAdminTestJSON.test_get_updated_quotas [11.169984s] ... ok
+2019-04-08 07:14:39 | {4} tempest.api.compute.admin.test_quotas.QuotasAdminTestJSON.test_update_all_quota_resources_for_tenant [3.198530s] ... ok
+2019-04-08 07:14:42 | {3} tempest.api.compute.admin.test_services.ServicesAdminTestJSON.test_get_service_by_host_name [0.581117s] ... ok
+2019-04-08 07:14:42 | {3} tempest.api.compute.admin.test_services.ServicesAdminTestJSON.test_get_service_by_service_binary_name [0.054439s] ... ok
+2019-04-08 07:14:42 | {3} tempest.api.compute.admin.test_services.ServicesAdminTestJSON.test_list_services [0.053712s] ... ok
+2019-04-08 07:14:54 | {3} tempest.api.compute.admin.test_simple_tenant_usage_negative.TenantUsagesNegativeTestJSON.test_get_usage_tenant_with_empty_tenant_id [0.800389s] ... ok
+2019-04-08 07:14:55 | {3} tempest.api.compute.admin.test_simple_tenant_usage_negative.TenantUsagesNegativeTestJSON.test_get_usage_tenant_with_invalid_date [0.162520s] ... ok
+2019-04-08 07:14:55 | {3} tempest.api.compute.admin.test_simple_tenant_usage_negative.TenantUsagesNegativeTestJSON.test_list_usage_all_tenants_with_non_admin_user [0.714908s] ... ok
+2019-04-08 07:14:57 | {4} tempest.api.compute.admin.test_security_groups.SecurityGroupsTestAdminJSON.test_list_security_groups_list_all_tenants_filter [5.259507s] ... ok
+2019-04-08 07:14:59 | {3} setUpClass (tempest.api.compute.admin.test_volume_swap.TestMultiAttachVolumeSwap) ... SKIPPED: The microversion range[2.60 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:15:00 | {4} setUpClass (tempest.api.compute.admin.test_server_diagnostics_negative.ServerDiagnosticsNegativeV248Test) ... SKIPPED: The microversion range[2.48 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:15:06 | {4} tempest.api.compute.admin.test_services_negative.ServicesAdminNegativeTestJSON.test_get_service_by_invalid_params [0.507222s] ... ok
+2019-04-08 07:15:06 | {4} tempest.api.compute.admin.test_services_negative.ServicesAdminNegativeTestJSON.test_get_service_by_invalid_service_and_valid_host [0.140650s] ... ok
+2019-04-08 07:15:07 | {4} tempest.api.compute.admin.test_services_negative.ServicesAdminNegativeTestJSON.test_get_service_with_valid_service_and_invalid_host [0.109018s] ... ok
+2019-04-08 07:15:07 | {4} tempest.api.compute.admin.test_services_negative.ServicesAdminNegativeTestJSON.test_list_services_with_non_admin_user [0.417596s] ... ok
+2019-04-08 07:15:10 | {4} setUpClass (tempest.api.compute.admin.test_services_negative.ServicesAdminNegativeV253TestJSON) ... SKIPPED: The microversion range[2.53 - latest] of this test is out of the configuration range[None - None].
+2019-04-08 07:15:11 | 
+2019-04-08 07:15:11 | ======
+2019-04-08 07:15:11 | Totals
+2019-04-08 07:15:11 | ======
+2019-04-08 07:15:11 | Ran: 175 tests in 334.0000 sec.
+2019-04-08 07:15:11 |  - Passed: 144
+2019-04-08 07:15:11 |  - Skipped: 31
+2019-04-08 07:15:11 |  - Expected Fail: 0
+2019-04-08 07:15:11 |  - Unexpected Success: 0
+2019-04-08 07:15:11 |  - Failed: 0
+2019-04-08 07:15:11 | Sum of execute time for each test: 339.0050 sec.
+2019-04-08 07:15:11 | 
+2019-04-08 07:15:11 | ==============
+2019-04-08 07:15:11 | Worker Balance
+2019-04-08 07:15:11 | ==============
+2019-04-08 07:15:11 |  - Worker 0 (36 tests) => 0:04:27.729389
+2019-04-08 07:15:11 |  - Worker 1 (22 tests) => 0:03:48.524513
+2019-04-08 07:15:11 |  - Worker 2 (29 tests) => 0:04:31.651335
+2019-04-08 07:15:11 |  - Worker 3 (39 tests) => 0:04:58.192631
+2019-04-08 07:15:11 |  - Worker 4 (49 tests) => 0:05:01.082595
+2019-04-08 07:15:18 | Begin cleanup
+2019-04-08 07:15:18 | Process 0 projects

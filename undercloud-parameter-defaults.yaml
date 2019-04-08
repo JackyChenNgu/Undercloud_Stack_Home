@@ -1,0 +1,6 @@
+{
+    "parameter_defaults": {}, 
+    "resource_registry": {
+        "OS::TripleO::Undercloud::Net::SoftwareConfig": "/usr/share/openstack-tripleo-heat-templates/net-config-undercloud.yaml"
+    }
+}

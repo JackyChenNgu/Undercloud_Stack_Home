@@ -1,0 +1,30 @@
+{
+  "domains": {
+    "default": "Default"
+  },
+  "flavors": {
+    "61435f99-eaf2-4de5-a115-55dadaf05757": "m1.micro",
+    "aa0bf69d-b97b-4102-b2b6-196ccdd3b28c": "m1.nano"
+  },
+  "images": {
+    "546c24a3-8329-4fa9-bf73-68d83cae4ddc": "cirros-0.3.6-x86_64-disk.img",
+    "7bb72cbd-a52e-49ae-9cd6-e0a17866fd45": "cirros-0.3.6-x86_64-disk.img_alt"
+  },
+  "projects": {
+    "17d85099c48d4e60b819c7f0bee79a5e": "alt_demo",
+    "38cdc25f338446be9374cb5ee33e25a4": "demo",
+    "4a96c8202ad7496b944f55c7781ef527": "admin",
+    "fe23f7ba769f406f9eb42c6be563cad8": "service"
+  },
+  "roles": {},
+  "users": {
+    "4899e06358df4e739d0424504d5a00b1": "nova",
+    "564a7b5da27549d2ab07f50bf30e951d": "swift",
+    "5fd4f821b2a24335bb234569296e49a0": "glance",
+    "63d98223f20c4c23801442faec14929b": "demo",
+    "7f63d00416ef4683bef55d8f1481518a": "alt_demo",
+    "96a3225330a64c89894752a4cbd27ac9": "neutron",
+    "ab14512b6b5046339e9f93c7d3f7c5ea": "admin",
+    "c1cccaa4cb6940c7893391e64f2abae9": "placement"
+  }
+}

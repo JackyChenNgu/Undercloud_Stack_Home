@@ -1,0 +1,166 @@
+
+
+# skip list for running tempest against the overcloud deployment
+
+# Difference in Implied Roles check API return code
+# https://bugs.launchpad.net/keystone/+bug/1660603
+tempest.api.identity.admin.v3.test_roles.RolesV3TestJSON.test_implied_roles_create_check_show_delete
+
+# Neutron Tempest plugin scenario tests are not yet stable.
+# https://launchpad.net/bugs/1737940
+neutron_tempest_plugin.scenario
+
+# RBAC policy resource conflict
+# https://bugs.launchpad.net/tripleo/+bug/1753209
+neutron_tempest_plugin.api.admin.test_shared_network_extension.RBACSharedNetworksTest
+
+# network resource conflict
+# https://bugs.launchpad.net/tripleo/+bug/1753211
+tempest.api.volume.test_volumes_snapshots.VolumesSnapshotTestJSON
+
+# Not supported in TripleO/tempestconf
+patrole_tempest_plugin
+
+# Not supported in TripleO/tempestconf
+zaqar_tempest_plugin
+
+# Not supported in TripleO
+watcher_tempest_plugin
+
+# Not supported in TripleO
+vitrage_tempest_plugin
+
+# Not supported in TripleO
+trove_tempest_plugin
+
+# Not supported in TripleO
+tripleo_common_tempest_plugin
+
+# Not supported in TripleO
+tempest_horizon
+
+# Not supported in TripleO
+octavia_tempest_plugin
+
+# Not supported in TripleO
+murano_tempest_tests
+
+# Not supported in TripleO
+mistral_tempest_tests
+
+# Not supported in TripleO
+magnum_tempest_plugin
+
+# Not supported in TripleO
+kuryr_tempest_plugin
+
+# Not supported in TripleO
+ironic_tempest_plugin
+
+# Not supported in TripleO
+heat_tempest_plugin
+
+# Not supported in TripleO
+designate_tempest_plugin
+
+# Not supported in TripleO
+congress_tempest_plugin
+
+# Not supported in TripleO
+barbican_tempest_plugin
+
+# Not supported in TripleO/tempestconf
+ec2api_tempest_plugin
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_trunk_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_timestamp
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_subnetpools_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_service_type_management
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_security_groups
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_routers_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_routers
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_qos_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_qos
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_ports
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_networks_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_networks
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_floating_ips_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_floating_ips
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_flavors_extensions
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_extension_driver_port_security
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_allowed_address_pair
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_address_scopes_negative
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.test_address_scopes
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.admin.test_shared_network_extension
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.admin.test_routers_ha
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.admin.test_networks.NetworksTestAdmin
+
+# neutron tempest tests are failing by giving 503 Service Unavailable
+# https://bugs.launchpad.net/tripleo/+bug/1793482
+neutron_tempest_plugin.api.admin.test_l3_agent_scheduler
+

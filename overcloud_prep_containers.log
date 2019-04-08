@@ -1,0 +1,574 @@
+2019-04-08 06:16:11 | + PREPARE_ARGS='-e /usr/share/openstack-tripleo-heat-templates/environments/docker.yaml'
+2019-04-08 06:16:11 | + openstack tripleo container image prepare --verbose --output-env-file /home/stack/containers-default-parameters.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/docker.yaml -e /home/stack/containers-prepare-parameter.yaml
+2019-04-08 06:16:12 | START with options: [u'tripleo', u'container', u'image', u'prepare', u'--verbose', u'--output-env-file', u'/home/stack/containers-default-parameters.yaml', u'-e', u'/usr/share/openstack-tripleo-heat-templates/environments/docker.yaml', u'-e', u'/home/stack/containers-prepare-parameter.yaml']
+2019-04-08 06:16:12 | command: tripleo container image prepare -> tripleoclient.v1.container_image.TripleOImagePrepare (auth=False)
+2019-04-08 06:16:14 | Using config files: ['/tmp/tmp9g05AA']
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:16:14 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-aodh-evaluator:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-aodh-evaluator:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-aodh-listener:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-aodh-listener:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-aodh-notifier:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-aodh-notifier:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-compute:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-compute:current-tripleo-rdo
+2019-04-08 06:16:14 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-notification:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-notification:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-aodh-listener:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-aodh-evaluator:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-aodh-notifier:current-tripleo-rdo
+2019-04-08 06:16:14 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-notification:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-compute:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-aodh-listener:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-cinder-backup:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-cinder-backup:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-cinder-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-cinder-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-cinder-volume:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-cinder-volume:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-aodh-evaluator:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-notification:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-aodh-notifier:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-backend-bind9:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-backend-bind9:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ceilometer-compute:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-central:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-central:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-cinder-backup:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-cinder-volume:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-mdns:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-mdns:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-cinder-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-cinder-backup:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-producer:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-producer:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-central:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-backend-bind9:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-cinder-volume:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-sink:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-sink:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-mdns:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-cinder-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-producer:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-sink:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-central:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-backend-bind9:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-metricd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-metricd:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-mdns:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-statsd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-statsd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-producer:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-sink:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-metricd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-statsd:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-heat-engine:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-heat-engine:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-metricd:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ironic-conductor:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ironic-conductor:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-heat-engine:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-ironic-neutron-agent:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-ironic-neutron-agent:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-gnocchi-statsd:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ironic-conductor:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-heat-engine:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-ironic-neutron-agent:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-manila-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-manila-scheduler:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:16:15 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ironic-conductor:current-tripleo-rdo
+2019-04-08 06:16:15 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-manila-share:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-manila-share:current-tripleo-rdo
+2019-04-08 06:16:15 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-manila-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-mistral-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-mistral-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-ironic-neutron-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-mistral-executor:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-mistral-executor:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-mistral-event-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-mistral-event-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-manila-share:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-neutron-dhcp-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-neutron-dhcp-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-neutron-l3-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-neutron-l3-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-manila-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-mistral-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-mistral-event-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-manila-share:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-neutron-openvswitch-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-neutron-openvswitch-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-mistral-executor:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-neutron-l3-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-neutron-dhcp-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-mistral-event-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute-ironic:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-compute-ironic:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-mistral-engine:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-neutron-openvswitch-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-conductor:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-conductor:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-mistral-executor:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-neutron-dhcp-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-neutron-l3-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-compute-ironic:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-neutron-openvswitch-agent:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-nova-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-nova-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-conductor:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute-ironic:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-nova-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy
+2019-04-08 06:16:16 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-neutron-metadata-agent
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-conductor:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-scheduler:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager
+2019-04-08 06:16:16 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:16:16 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:16:16 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:16:16 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:16:17 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker
+2019-04-08 06:16:17 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-panko-api
+2019-04-08 06:16:17 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:16:17 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:16:17 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:16:17 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:16:17 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:16:17 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:16:17 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-redis
+2019-04-08 06:16:17 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:16:17 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-sahara-api
+2019-04-08 06:16:18 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-nova-consoleauth
+2019-04-08 06:16:18 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-nova-novncproxy
+2019-04-08 06:16:18 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-octavia-housekeeping
+2019-04-08 06:16:18 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-octavia-health-manager
+2019-04-08 06:16:18 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-octavia-worker
+2019-04-08 06:16:21 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:16:21 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:16:21 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:16:21 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:16:21 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-sensu-client
+2019-04-08 06:16:21 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine
+2019-04-08 06:16:21 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:16:21 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:16:21 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:16:22 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent
+2019-04-08 06:16:25 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:16:25 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:16:25 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:16:25 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-swift-account:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-swift-account:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:16:25 | Pulling 10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-swift-account:current-tripleo-rdo
+2019-04-08 06:16:25 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-panko-api
+2019-04-08 06:16:25 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-swift-account:current-tripleo-rdo
+2019-04-08 06:16:25 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-swift-container:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-swift-container:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-swift-container:current-tripleo-rdo
+2019-04-08 06:16:25 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-swift-container:current-tripleo-rdo
+2019-04-08 06:16:25 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-swift-object:current-tripleo-rdo
+2019-04-08 06:16:25 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-swift-object:current-tripleo-rdo
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-swift-object:current-tripleo-rdo
+2019-04-08 06:16:26 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-swift-object:current-tripleo-rdo
+2019-04-08 06:16:26 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:16:26 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:16:26 | imagename: 10.200.2.160:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:16:26 | Skipping upload for image 10.200.2.160:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:16:26 | imagename: 10.200.2.160:8787/ceph/daemon:latest
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://10.200.2.160:8787/ceph/daemon:latest
+2019-04-08 06:16:26 | Running skopeo inspect --tls-verify=false docker://192.168.24.1:8787/ceph/daemon:latest
+2019-04-08 06:16:26 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-redis
+2019-04-08 06:16:26 | Pulling 10.200.2.160:8787/ceph/daemon
+2019-04-08 06:16:27 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-sahara-engine
+2019-04-08 06:16:30 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-sahara-api
+2019-04-08 06:16:31 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:16:31 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-skydive-analyzer
+2019-04-08 06:16:32 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-skydive-agent
+2019-04-08 06:16:33 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-sensu-client
+2019-04-08 06:16:39 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:16:39 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:16:41 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:16:42 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:16:43 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-nova-compute
+2019-04-08 06:16:48 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:16:52 | Pushing 192.168.24.1:8787/ceph/daemon
+2019-04-08 06:16:52 | Pushing 192.168.24.1:8787/tripleorocky/centos-binary-nova-libvirt
+2019-04-08 06:16:53 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:17:21 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:17:29 | Completed upload for image 10.200.2.160:8787/ceph/daemon:latest
+2019-04-08 06:17:42 | Completed upload for image 10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:17:42 | result ['10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo', '10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo', '192.168.24.1:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo', '10.200.2.160:8787/ceph/daemon:latest', '192.168.24.1:8787/ceph/daemon:latest']
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/ceph/daemon:latest
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 10.200.2.160:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:17:42 | Removing local copy of 192.168.24.1:8787/ceph/daemon:latest
+2019-04-08 06:17:43 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:17:43 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:17:44 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:17:44 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:17:45 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:17:46 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:17:46 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:17:46 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:17:46 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:17:46 | Removing local copy of 192.168.24.1:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:17:46 | END return value: None
+2019-04-08 06:17:46 | + echo =============================
+2019-04-08 06:17:46 | =============================
+2019-04-08 06:17:46 | + echo 'Containers default parameters:'
+2019-04-08 06:17:46 | Containers default parameters:
+2019-04-08 06:17:46 | + cat /home/stack/containers-default-parameters.yaml
+2019-04-08 06:17:46 | # Generated with the following on 2019-04-08T06:17:46.843669
+2019-04-08 06:17:46 | #
+2019-04-08 06:17:46 | #   openstack tripleo container image prepare --verbose --output-env-file /home/stack/containers-default-parameters.yaml -e /usr/share/openstack-tripleo-heat-templates/environments/docker.yaml -e /home/stack/containers-prepare-parameter.yaml
+2019-04-08 06:17:46 | #
+2019-04-08 06:17:46 | 
+2019-04-08 06:17:46 | parameter_defaults:
+2019-04-08 06:17:46 |   DockerAodhApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerAodhConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-aodh-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerAodhEvaluatorImage: 192.168.24.1:8787/tripleorocky/centos-binary-aodh-evaluator:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerAodhListenerImage: 192.168.24.1:8787/tripleorocky/centos-binary-aodh-listener:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerAodhNotifierImage: 192.168.24.1:8787/tripleorocky/centos-binary-aodh-notifier:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanKeystoneListenerConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanKeystoneListenerImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-keystone-listener:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanWorkerConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerBarbicanWorkerImage: 192.168.24.1:8787/tripleorocky/centos-binary-barbican-worker:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCeilometerCentralImage: 192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCeilometerComputeImage: 192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-compute:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCeilometerConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-central:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCeilometerNotificationImage: 192.168.24.1:8787/tripleorocky/centos-binary-ceilometer-notification:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCephDaemonImage: 192.168.24.1:8787/ceph/daemon:latest
+2019-04-08 06:17:46 |   DockerCinderApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCinderBackupImage: 192.168.24.1:8787/tripleorocky/centos-binary-cinder-backup:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCinderConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-cinder-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCinderSchedulerImage: 192.168.24.1:8787/tripleorocky/centos-binary-cinder-scheduler:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCinderVolumeImage: 192.168.24.1:8787/tripleorocky/centos-binary-cinder-volume:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerClustercheckConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerClustercheckImage: 192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCollectdConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCollectdImage: 192.168.24.1:8787/tripleorocky/centos-binary-collectd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCongressApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCongressConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-congress-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCrondConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerCrondImage: 192.168.24.1:8787/tripleorocky/centos-binary-cron:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateBackendBIND9Image: 192.168.24.1:8787/tripleorocky/centos-binary-designate-backend-bind9:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateCentralImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-central:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateMDNSImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-mdns:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateProducerImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-producer:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateSinkImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-sink:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerDesignateWorkerImage: 192.168.24.1:8787/tripleorocky/centos-binary-designate-worker:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerEc2ApiConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerEc2ApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-ec2-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerEtcdConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerEtcdImage: 192.168.24.1:8787/tripleorocky/centos-binary-etcd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerFluentdClientImage: 192.168.24.1:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerFluentdConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerFluentdImage: 192.168.24.1:8787/tripleorocky/centos-binary-fluentd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGlanceApiConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGlanceApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-glance-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGnocchiApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGnocchiConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGnocchiMetricdImage: 192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-metricd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerGnocchiStatsdImage: 192.168.24.1:8787/tripleorocky/centos-binary-gnocchi-statsd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHAProxyConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHAProxyImage: 192.168.24.1:8787/tripleorocky/centos-binary-haproxy:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatApiCfnConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatApiCfnImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-api-cfn:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatApiConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHeatEngineImage: 192.168.24.1:8787/tripleorocky/centos-binary-heat-engine:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHorizonConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerHorizonImage: 192.168.24.1:8787/tripleorocky/centos-binary-horizon:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerInsecureRegistryAddress:
+2019-04-08 06:17:46 |   - 192.168.24.1:8787
+2019-04-08 06:17:46 |   DockerIronicApiConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicConductorImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-conductor:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicInspectorConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicInspectorImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-inspector:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicNeutronAgentImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-neutron-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIronicPxeImage: 192.168.24.1:8787/tripleorocky/centos-binary-ironic-pxe:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIscsidConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerIscsidImage: 192.168.24.1:8787/tripleorocky/centos-binary-iscsid:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerKeepalivedConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerKeepalivedImage: 192.168.24.1:8787/tripleorocky/centos-binary-keepalived:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerKeystoneConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerKeystoneImage: 192.168.24.1:8787/tripleorocky/centos-binary-keystone:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerManilaApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerManilaConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-manila-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerManilaSchedulerImage: 192.168.24.1:8787/tripleorocky/centos-binary-manila-scheduler:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerManilaShareImage: 192.168.24.1:8787/tripleorocky/centos-binary-manila-share:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMemcachedConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMemcachedImage: 192.168.24.1:8787/tripleorocky/centos-binary-memcached:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMetricsQdrConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMetricsQdrImage: 192.168.24.1:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMistralApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMistralConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-mistral-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMistralEngineImage: 192.168.24.1:8787/tripleorocky/centos-binary-mistral-engine:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMistralEventEngineImage: 192.168.24.1:8787/tripleorocky/centos-binary-mistral-event-engine:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMistralExecutorImage: 192.168.24.1:8787/tripleorocky/centos-binary-mistral-executor:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMysqlClientConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMysqlConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerMysqlImage: 192.168.24.1:8787/tripleorocky/centos-binary-mariadb:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNeutronApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNeutronConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-server:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNeutronDHCPImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-dhcp-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNeutronL3AgentImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-l3-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNeutronMetadataImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-metadata-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaComputeImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaComputeIronicImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-compute-ironic:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaConductorImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-conductor:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaConsoleauthImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-consoleauth:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaLibvirtConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-compute:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaLibvirtImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-libvirt:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaMetadataConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaMetadataImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaPlacementConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaPlacementImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-placement-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaSchedulerImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-scheduler:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerNovaVncProxyImage: 192.168.24.1:8787/tripleorocky/centos-binary-nova-novncproxy:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOctaviaApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOctaviaConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-octavia-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOctaviaHealthManagerImage: 192.168.24.1:8787/tripleorocky/centos-binary-octavia-health-manager:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOctaviaHousekeepingImage: 192.168.24.1:8787/tripleorocky/centos-binary-octavia-housekeeping:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOctaviaWorkerImage: 192.168.24.1:8787/tripleorocky/centos-binary-octavia-worker:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerOpenvswitchImage: 192.168.24.1:8787/tripleorocky/centos-binary-neutron-openvswitch-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerPankoApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerPankoConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-panko-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerQdrouterdConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerQdrouterdImage: 192.168.24.1:8787/tripleorocky/centos-binary-qdrouterd:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRabbitmqConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRabbitmqImage: 192.168.24.1:8787/tripleorocky/centos-binary-rabbitmq:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRedisConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRedisImage: 192.168.24.1:8787/tripleorocky/centos-binary-redis:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRsyslogSidecarConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerRsyslogSidecarImage: 192.168.24.1:8787/tripleorocky/centos-binary-rsyslog-base:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSaharaApiImage: 192.168.24.1:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSaharaConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-sahara-api:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSaharaEngineImage: 192.168.24.1:8787/tripleorocky/centos-binary-sahara-engine:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSensuClientImage: 192.168.24.1:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSensuConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-sensu-client:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSkydiveAgentImage: 192.168.24.1:8787/tripleorocky/centos-binary-skydive-agent:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSkydiveAnalyzerImage: 192.168.24.1:8787/tripleorocky/centos-binary-skydive-analyzer:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSwiftAccountImage: 192.168.24.1:8787/tripleorocky/centos-binary-swift-account:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSwiftConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSwiftContainerImage: 192.168.24.1:8787/tripleorocky/centos-binary-swift-container:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSwiftObjectImage: 192.168.24.1:8787/tripleorocky/centos-binary-swift-object:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerSwiftProxyImage: 192.168.24.1:8787/tripleorocky/centos-binary-swift-proxy-server:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerZaqarConfigImage: 192.168.24.1:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:17:46 |   DockerZaqarImage: 192.168.24.1:8787/tripleorocky/centos-binary-zaqar:current-tripleo-rdo
+2019-04-08 06:17:46 | + echo =============================
+2019-04-08 06:17:46 | =============================
+2019-04-08 06:17:46 | + sudo journalctl -u docker

@@ -1,0 +1,141 @@
+2019-04-08 06:58:20 | + HOSTFILE=/etc/hosts
+2019-04-08 06:58:20 | + . /home/stack/stackrc
+2019-04-08 06:58:20 | +++ set
+2019-04-08 06:58:20 | +++ awk -F= '/^OS_/ {print $1}'
+2019-04-08 06:58:20 | ++ export OS_AUTH_TYPE=password
+2019-04-08 06:58:20 | ++ OS_AUTH_TYPE=password
+2019-04-08 06:58:20 | ++ export OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:58:20 | ++ OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:58:20 | ++ export OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:58:20 | ++ OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:58:20 | ++ export OS_USERNAME=admin
+2019-04-08 06:58:20 | ++ OS_USERNAME=admin
+2019-04-08 06:58:20 | ++ export OS_PROJECT_NAME=admin
+2019-04-08 06:58:20 | ++ OS_PROJECT_NAME=admin
+2019-04-08 06:58:20 | ++ export COMPUTE_API_VERSION=1.1
+2019-04-08 06:58:20 | ++ COMPUTE_API_VERSION=1.1
+2019-04-08 06:58:20 | ++ export NOVA_VERSION=1.1
+2019-04-08 06:58:20 | ++ NOVA_VERSION=1.1
+2019-04-08 06:58:20 | ++ export OS_NO_CACHE=True
+2019-04-08 06:58:20 | ++ OS_NO_CACHE=True
+2019-04-08 06:58:20 | ++ export OS_CLOUDNAME=undercloud
+2019-04-08 06:58:20 | ++ OS_CLOUDNAME=undercloud
+2019-04-08 06:58:20 | ++ export OS_IDENTITY_API_VERSION=3
+2019-04-08 06:58:20 | ++ OS_IDENTITY_API_VERSION=3
+2019-04-08 06:58:20 | ++ export OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:58:20 | ++ OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:58:20 | ++ export OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:58:20 | ++ OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:58:20 | ++ export OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:58:20 | ++ OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:58:20 | ++ '[' -z '' ']'
+2019-04-08 06:58:20 | ++ export PS1=
+2019-04-08 06:58:20 | ++ PS1=
+2019-04-08 06:58:20 | ++ export 'PS1=${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:58:20 | ++ PS1='${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:58:20 | ++ export CLOUDPROMPT_ENABLED=1
+2019-04-08 06:58:20 | ++ CLOUDPROMPT_ENABLED=1
+2019-04-08 06:58:20 | + sudo sed -i '/^## BEGIN OVERCLOUD HOSTS/,/^## END OVERCLOUD HOSTS/ d' /etc/hosts
+2019-04-08 06:58:20 | + cat
+2019-04-08 06:58:20 | + sudo tee -a /etc/hosts
+2019-04-08 06:58:20 | ++ openstack stack output show overcloud HostsEntry -f value -c output_value
+2019-04-08 06:58:23 | ## BEGIN OVERCLOUD HOSTS  #nodocs
+2019-04-08 06:58:23 | 192.168.24.16  overcloud.ctlplane.localdomain
+2019-04-08 06:58:23 | 172.16.1.4  overcloud.storage.localdomain
+2019-04-08 06:58:23 | 172.16.3.5  overcloud.storagemgmt.localdomain
+2019-04-08 06:58:23 | 172.16.2.10  overcloud.internalapi.localdomain
+2019-04-08 06:58:23 | 10.0.0.5  overcloud.localdomain
+2019-04-08 06:58:23 | 172.16.2.4 overcloud-controller-0.localdomain overcloud-controller-0
+2019-04-08 06:58:23 | 172.16.1.6 overcloud-controller-0.storage.localdomain overcloud-controller-0.storage
+2019-04-08 06:58:23 | 172.16.3.30 overcloud-controller-0.storagemgmt.localdomain overcloud-controller-0.storagemgmt
+2019-04-08 06:58:23 | 172.16.2.4 overcloud-controller-0.internalapi.localdomain overcloud-controller-0.internalapi
+2019-04-08 06:58:23 | 172.16.0.10 overcloud-controller-0.tenant.localdomain overcloud-controller-0.tenant
+2019-04-08 06:58:23 | 10.0.0.21 overcloud-controller-0.external.localdomain overcloud-controller-0.external
+2019-04-08 06:58:23 | 192.168.24.11 overcloud-controller-0.ctlplane.localdomain overcloud-controller-0.ctlplane
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | 172.16.2.16 overcloud-novacompute-0.localdomain overcloud-novacompute-0
+2019-04-08 06:58:23 | 172.16.1.15 overcloud-novacompute-0.storage.localdomain overcloud-novacompute-0.storage
+2019-04-08 06:58:23 | 172.16.2.16 overcloud-novacompute-0.internalapi.localdomain overcloud-novacompute-0.internalapi
+2019-04-08 06:58:23 | 172.16.0.11 overcloud-novacompute-0.tenant.localdomain overcloud-novacompute-0.tenant
+2019-04-08 06:58:23 | 192.168.24.6 overcloud-novacompute-0.ctlplane.localdomain overcloud-novacompute-0.ctlplane
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | 192.168.24.16  overcloud.ctlplane.localdomain
+2019-04-08 06:58:23 | 172.16.1.4  overcloud.storage.localdomain
+2019-04-08 06:58:23 | 172.16.3.5  overcloud.storagemgmt.localdomain
+2019-04-08 06:58:23 | 172.16.2.10  overcloud.internalapi.localdomain
+2019-04-08 06:58:23 | 10.0.0.5  overcloud.localdomain
+2019-04-08 06:58:23 | 
+2019-04-08 06:58:23 | ## END OVERCLOUD HOSTS    #nodocs
+2019-04-08 06:58:23 | + openstack stack output show overcloud EnabledServices -f value -c output_value
+2019-04-08 06:58:23 | + grep -q keystone
+2019-04-08 06:58:27 | + . /home/stack/overcloudrc
+2019-04-08 06:58:27 | +++ set
+2019-04-08 06:58:27 | +++ awk '{FS="="}  /^OS_/ {print $1}'
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_AUTH_TYPE
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_AUTH_URL
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_CACERT
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_CLOUDNAME
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_IDENTITY_API_VERSION
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_NO_CACHE
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_PASSWORD
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_PROJECT_DOMAIN_NAME
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_PROJECT_NAME
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_USERNAME
+2019-04-08 06:58:27 | ++ for key in '$( set | awk '\''{FS="="}  /^OS_/ {print $1}'\'' )'
+2019-04-08 06:58:27 | ++ unset OS_USER_DOMAIN_NAME
+2019-04-08 06:58:27 | ++ export OS_NO_CACHE=True
+2019-04-08 06:58:27 | ++ OS_NO_CACHE=True
+2019-04-08 06:58:27 | ++ export COMPUTE_API_VERSION=1.1
+2019-04-08 06:58:27 | ++ COMPUTE_API_VERSION=1.1
+2019-04-08 06:58:27 | ++ export OS_USERNAME=admin
+2019-04-08 06:58:27 | ++ OS_USERNAME=admin
+2019-04-08 06:58:27 | ++ export no_proxy=,10.0.0.5,192.168.24.16
+2019-04-08 06:58:27 | ++ no_proxy=,10.0.0.5,192.168.24.16
+2019-04-08 06:58:27 | ++ export OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:58:27 | ++ OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:58:27 | ++ export OS_VOLUME_API_VERSION=3
+2019-04-08 06:58:27 | ++ OS_VOLUME_API_VERSION=3
+2019-04-08 06:58:27 | ++ export OS_CLOUDNAME=overcloud
+2019-04-08 06:58:27 | ++ OS_CLOUDNAME=overcloud
+2019-04-08 06:58:27 | ++ export OS_AUTH_URL=https://10.0.0.5:13000/v3
+2019-04-08 06:58:27 | ++ OS_AUTH_URL=https://10.0.0.5:13000/v3
+2019-04-08 06:58:27 | ++ export NOVA_VERSION=1.1
+2019-04-08 06:58:27 | ++ NOVA_VERSION=1.1
+2019-04-08 06:58:27 | ++ export OS_IMAGE_API_VERSION=2
+2019-04-08 06:58:27 | ++ OS_IMAGE_API_VERSION=2
+2019-04-08 06:58:27 | ++ export OS_PASSWORD=ET36Qna3CHDa8sXZSLsjAXBMO
+2019-04-08 06:58:27 | ++ OS_PASSWORD=ET36Qna3CHDa8sXZSLsjAXBMO
+2019-04-08 06:58:27 | ++ export OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:58:27 | ++ OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:58:27 | ++ export OS_IDENTITY_API_VERSION=3
+2019-04-08 06:58:27 | ++ OS_IDENTITY_API_VERSION=3
+2019-04-08 06:58:27 | ++ export OS_PROJECT_NAME=admin
+2019-04-08 06:58:27 | ++ OS_PROJECT_NAME=admin
+2019-04-08 06:58:27 | ++ export OS_AUTH_TYPE=password
+2019-04-08 06:58:27 | ++ OS_AUTH_TYPE=password
+2019-04-08 06:58:27 | ++ export 'PYTHONWARNINGS=ignore:Certificate has no, ignore:A true SSLContext object is not available'
+2019-04-08 06:58:27 | ++ PYTHONWARNINGS='ignore:Certificate has no, ignore:A true SSLContext object is not available'
+2019-04-08 06:58:27 | ++ '[' -z 1 ']'
+2019-04-08 06:58:27 | + openstack role show heat_stack_owner
+2019-04-08 06:58:29 | + openstack role create heat_stack_owner
+2019-04-08 06:58:32 | +-----------+----------------------------------+
+2019-04-08 06:58:32 | | Field     | Value                            |
+2019-04-08 06:58:32 | +-----------+----------------------------------+
+2019-04-08 06:58:32 | | domain_id | None                             |
+2019-04-08 06:58:32 | | id        | 70fbab23a4e34a758a9fbfb7e2965373 |
+2019-04-08 06:58:32 | | name      | heat_stack_owner                 |
+2019-04-08 06:58:32 | +-----------+----------------------------------+
+2019-04-08 06:58:32 | + openstack role add --project admin --user admin heat_stack_owner

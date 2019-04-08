@@ -1,0 +1,131 @@
+2019-04-08 06:23:03 | + source /home/stack/stackrc
+2019-04-08 06:23:03 | +++ set
+2019-04-08 06:23:03 | +++ awk -F= '/^OS_/ {print $1}'
+2019-04-08 06:23:03 | ++ export OS_AUTH_TYPE=password
+2019-04-08 06:23:03 | ++ OS_AUTH_TYPE=password
+2019-04-08 06:23:03 | ++ export OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:23:03 | ++ OS_PASSWORD=PDh5wEmY8prUjVAh6alcVjOpS
+2019-04-08 06:23:03 | ++ export OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:23:03 | ++ OS_AUTH_URL=https://192.168.24.2:13000/
+2019-04-08 06:23:03 | ++ export OS_USERNAME=admin
+2019-04-08 06:23:03 | ++ OS_USERNAME=admin
+2019-04-08 06:23:03 | ++ export OS_PROJECT_NAME=admin
+2019-04-08 06:23:03 | ++ OS_PROJECT_NAME=admin
+2019-04-08 06:23:03 | ++ export COMPUTE_API_VERSION=1.1
+2019-04-08 06:23:03 | ++ COMPUTE_API_VERSION=1.1
+2019-04-08 06:23:03 | ++ export NOVA_VERSION=1.1
+2019-04-08 06:23:03 | ++ NOVA_VERSION=1.1
+2019-04-08 06:23:03 | ++ export OS_NO_CACHE=True
+2019-04-08 06:23:03 | ++ OS_NO_CACHE=True
+2019-04-08 06:23:03 | ++ export OS_CLOUDNAME=undercloud
+2019-04-08 06:23:03 | ++ OS_CLOUDNAME=undercloud
+2019-04-08 06:23:03 | ++ export OS_IDENTITY_API_VERSION=3
+2019-04-08 06:23:03 | ++ OS_IDENTITY_API_VERSION=3
+2019-04-08 06:23:03 | ++ export OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:23:03 | ++ OS_PROJECT_DOMAIN_NAME=Default
+2019-04-08 06:23:03 | ++ export OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:23:03 | ++ OS_USER_DOMAIN_NAME=Default
+2019-04-08 06:23:03 | ++ export OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:23:03 | ++ OS_CACERT=/etc/pki/ca-trust/source/anchors/cm-local-ca.pem
+2019-04-08 06:23:03 | ++ '[' -z '' ']'
+2019-04-08 06:23:03 | ++ export PS1=
+2019-04-08 06:23:03 | ++ PS1=
+2019-04-08 06:23:03 | ++ export 'PS1=${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:23:03 | ++ PS1='${OS_CLOUDNAME:+($OS_CLOUDNAME)} '
+2019-04-08 06:23:03 | ++ export CLOUDPROMPT_ENABLED=1
+2019-04-08 06:23:03 | ++ CLOUDPROMPT_ENABLED=1
+2019-04-08 06:23:03 | + nova flavor-delete oooq_control
+2019-04-08 06:23:05 | + true
+2019-04-08 06:23:05 | + openstack flavor create --id auto --ram 8192 --disk 49 --vcpus 2 oooq_control
+2019-04-08 06:23:07 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:07 | | Field                      | Value                                |
+2019-04-08 06:23:07 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:07 | | OS-FLV-DISABLED:disabled   | False                                |
+2019-04-08 06:23:07 | | OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+2019-04-08 06:23:07 | | disk                       | 49                                   |
+2019-04-08 06:23:07 | | id                         | c997439f-eb23-4be8-b691-8fb94030c366 |
+2019-04-08 06:23:07 | | name                       | oooq_control                         |
+2019-04-08 06:23:07 | | os-flavor-access:is_public | True                                 |
+2019-04-08 06:23:07 | | properties                 |                                      |
+2019-04-08 06:23:07 | | ram                        | 8192                                 |
+2019-04-08 06:23:07 | | rxtx_factor                | 1.0                                  |
+2019-04-08 06:23:07 | | swap                       |                                      |
+2019-04-08 06:23:07 | | vcpus                      | 2                                    |
+2019-04-08 06:23:07 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:07 | + openstack flavor set --property cpu_arch=x86_64 --property capabilities:boot_option=local --property capabilities:profile=control oooq_control --property resources:CUSTOM_BAREMETAL=1 --property resources:DISK_GB=0 --property resources:MEMORY_MB=0 --property resources:VCPU=0
+2019-04-08 06:23:10 | + nova flavor-delete oooq_blockstorage
+2019-04-08 06:23:12 | + true
+2019-04-08 06:23:12 | + openstack flavor create --id auto --ram 8192 --disk 49 --vcpus 2 oooq_blockstorage
+2019-04-08 06:23:15 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:15 | | Field                      | Value                                |
+2019-04-08 06:23:15 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:15 | | OS-FLV-DISABLED:disabled   | False                                |
+2019-04-08 06:23:15 | | OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+2019-04-08 06:23:15 | | disk                       | 49                                   |
+2019-04-08 06:23:15 | | id                         | 424d40ad-f5f8-4475-b042-e8c66dc71be6 |
+2019-04-08 06:23:15 | | name                       | oooq_blockstorage                    |
+2019-04-08 06:23:15 | | os-flavor-access:is_public | True                                 |
+2019-04-08 06:23:15 | | properties                 |                                      |
+2019-04-08 06:23:15 | | ram                        | 8192                                 |
+2019-04-08 06:23:15 | | rxtx_factor                | 1.0                                  |
+2019-04-08 06:23:15 | | swap                       |                                      |
+2019-04-08 06:23:15 | | vcpus                      | 2                                    |
+2019-04-08 06:23:15 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:15 | + openstack flavor set --property cpu_arch=x86_64 --property capabilities:boot_option=local --property capabilities:profile=blockstorage oooq_blockstorage --property resources:CUSTOM_BAREMETAL=1 --property resources:DISK_GB=0 --property resources:MEMORY_MB=0 --property resources:VCPU=0
+2019-04-08 06:23:18 | + nova flavor-delete oooq_compute
+2019-04-08 06:23:20 | + true
+2019-04-08 06:23:20 | + openstack flavor create --id auto --ram 8192 --disk 49 --vcpus 2 oooq_compute
+2019-04-08 06:23:23 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:23 | | Field                      | Value                                |
+2019-04-08 06:23:23 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:23 | | OS-FLV-DISABLED:disabled   | False                                |
+2019-04-08 06:23:23 | | OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+2019-04-08 06:23:23 | | disk                       | 49                                   |
+2019-04-08 06:23:23 | | id                         | 0b24b7a4-461e-44c9-ac30-005e52915517 |
+2019-04-08 06:23:23 | | name                       | oooq_compute                         |
+2019-04-08 06:23:23 | | os-flavor-access:is_public | True                                 |
+2019-04-08 06:23:23 | | properties                 |                                      |
+2019-04-08 06:23:23 | | ram                        | 8192                                 |
+2019-04-08 06:23:23 | | rxtx_factor                | 1.0                                  |
+2019-04-08 06:23:23 | | swap                       |                                      |
+2019-04-08 06:23:23 | | vcpus                      | 2                                    |
+2019-04-08 06:23:23 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:23 | + openstack flavor set --property cpu_arch=x86_64 --property capabilities:boot_option=local --property capabilities:profile=compute oooq_compute --property resources:CUSTOM_BAREMETAL=1 --property resources:DISK_GB=0 --property resources:MEMORY_MB=0 --property resources:VCPU=0
+2019-04-08 06:23:26 | + nova flavor-delete oooq_objectstorage
+2019-04-08 06:23:28 | + true
+2019-04-08 06:23:28 | + openstack flavor create --id auto --ram 8192 --disk 49 --vcpus 2 oooq_objectstorage
+2019-04-08 06:23:30 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:30 | | Field                      | Value                                |
+2019-04-08 06:23:30 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:30 | | OS-FLV-DISABLED:disabled   | False                                |
+2019-04-08 06:23:30 | | OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+2019-04-08 06:23:30 | | disk                       | 49                                   |
+2019-04-08 06:23:30 | | id                         | a2bc292d-807e-4056-a1d0-45465fcdb389 |
+2019-04-08 06:23:30 | | name                       | oooq_objectstorage                   |
+2019-04-08 06:23:30 | | os-flavor-access:is_public | True                                 |
+2019-04-08 06:23:30 | | properties                 |                                      |
+2019-04-08 06:23:30 | | ram                        | 8192                                 |
+2019-04-08 06:23:30 | | rxtx_factor                | 1.0                                  |
+2019-04-08 06:23:30 | | swap                       |                                      |
+2019-04-08 06:23:30 | | vcpus                      | 2                                    |
+2019-04-08 06:23:30 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:30 | + openstack flavor set --property cpu_arch=x86_64 --property capabilities:boot_option=local --property capabilities:profile=objectstorage oooq_objectstorage --property resources:CUSTOM_BAREMETAL=1 --property resources:DISK_GB=0 --property resources:MEMORY_MB=0 --property resources:VCPU=0
+2019-04-08 06:23:33 | + nova flavor-delete oooq_ceph
+2019-04-08 06:23:35 | + true
+2019-04-08 06:23:35 | + openstack flavor create --id auto --ram 8192 --disk 49 --vcpus 2 oooq_ceph
+2019-04-08 06:23:38 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:38 | | Field                      | Value                                |
+2019-04-08 06:23:38 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:38 | | OS-FLV-DISABLED:disabled   | False                                |
+2019-04-08 06:23:38 | | OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+2019-04-08 06:23:38 | | disk                       | 49                                   |
+2019-04-08 06:23:38 | | id                         | 2f931ac2-8045-4427-9bf1-3285dcf6bab1 |
+2019-04-08 06:23:38 | | name                       | oooq_ceph                            |
+2019-04-08 06:23:38 | | os-flavor-access:is_public | True                                 |
+2019-04-08 06:23:38 | | properties                 |                                      |
+2019-04-08 06:23:38 | | ram                        | 8192                                 |
+2019-04-08 06:23:38 | | rxtx_factor                | 1.0                                  |
+2019-04-08 06:23:38 | | swap                       |                                      |
+2019-04-08 06:23:38 | | vcpus                      | 2                                    |
+2019-04-08 06:23:38 | +----------------------------+--------------------------------------+
+2019-04-08 06:23:38 | + openstack flavor set --property cpu_arch=x86_64 --property capabilities:boot_option=local --property capabilities:profile=ceph oooq_ceph --property resources:CUSTOM_BAREMETAL=1 --property resources:DISK_GB=0 --property resources:MEMORY_MB=0 --property resources:VCPU=0

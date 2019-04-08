@@ -1,0 +1,37 @@
+{
+  "nodes": [
+      {
+      "name": "control-0",
+              "pm_password": "password",
+                  "pm_type": "ipmi",
+                "pm_user": "admin",
+        "pm_addr": "192.168.24.1",
+        "pm_port": "6230",
+            "mac": [
+        "00:2c:5b:d4:77:e4"
+      ],
+      "cpu": "2",
+      "memory": "8192",
+      "disk": "50",
+      "arch": "x86_64",
+      "capabilities": "profile:control,boot_option:local"
+    }
+        ,
+          {
+      "name": "compute-0",
+              "pm_password": "password",
+                  "pm_type": "ipmi",
+                "pm_user": "admin",
+        "pm_addr": "192.168.24.1",
+        "pm_port": "6231",
+            "mac": [
+        "00:2c:5b:d4:77:e8"
+      ],
+      "cpu": "2",
+      "memory": "8192",
+      "disk": "50",
+      "arch": "x86_64",
+      "capabilities": "profile:compute,boot_option:local"
+    }
+        ]
+}

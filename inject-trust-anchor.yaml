@@ -1,0 +1,44 @@
+"parameter_defaults":
+  "CAMap":
+    "overcloud-ca":
+      "content": |
+        -----BEGIN CERTIFICATE-----
+        MIIDlTCCAn2gAwIBAgIJANzs585Jsv3cMA0GCSqGSIb3DQEBCwUAMGExCzAJBgNV
+        BAYTAlVTMQswCQYDVQQIDAJOQzEQMA4GA1UEBwwHUmFsZWlnaDEQMA4GA1UECgwH
+        UmVkIEhhdDENMAsGA1UECwwET09PUTESMBAGA1UEAwwJb3ZlcmNsb3VkMB4XDTE5
+        MDQwODA2MjQxMFoXDTIwMDQwNzA2MjQxMFowYTELMAkGA1UEBhMCVVMxCzAJBgNV
+        BAgMAk5DMRAwDgYDVQQHDAdSYWxlaWdoMRAwDgYDVQQKDAdSZWQgSGF0MQ0wCwYD
+        VQQLDARPT09RMRIwEAYDVQQDDAlvdmVyY2xvdWQwggEiMA0GCSqGSIb3DQEBAQUA
+        A4IBDwAwggEKAoIBAQDD1P7y8Fj8xyebVAwi3QlCITg1b/rJc0RLmgkfnCSkLtfQ
+        scjh0GbLsO4lGic+3vEyOey7RTzJO4IROV/pq8PVuj457C3of0EscAuC11KQ1Gge
+        cWtZ3xSjPz6nK3bOpNItuSyEmJ7e7tmlGMY8PACrCQpNvup4ItS8fxaRCEtwvg6v
+        RCTD/jdIn4ZJ96IrBlHF58uOb1Ppiwq/6Htf8FQ3U2Iy8okYTtbGCyoJaGkW1dHV
+        CK1jDt1x32oLcPhxoDL698iUWjuC+k3EaQNeJlW87A6UtpPbMmXbTjkNOdwfKEri
+        3DtbwjWLYb0KdvT7qh6EMsDyNwE+nSgzLPHOWkqFAgMBAAGjUDBOMB0GA1UdDgQW
+        BBSaSioFyifoyqoAGwrmw1OIAs9HNzAfBgNVHSMEGDAWgBSaSioFyifoyqoAGwrm
+        w1OIAs9HNzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB7lg+ZtaEx
+        JMoSTQRtTVjCJxBdY3J7IpLl0i0gv/Eh/TnS90k6fLbZWCARlJHIHJSGoneZsz+H
+        bOksPx0kS63XpjAwM8PBppAYRr7W2FDyERxnQ8Pm0LN7VC0Os4en/NX/18hucU1Q
+        UQVh5XuvkaKX+mx9vLGtckm/yOXck2yfSqaATZU0dPXeyV6wA7576L3U0NCstfWg
+        5pliFQsm5/gjiFMzzeP1Ps2zrE/Ss8RxWXGXiK3jXc+2ZeOotMQSuzNI3Kc/7gtk
+        RoA7N6tT4yz0UNuDeHgj5PJ/XLndoa/dwEJLdu2FgXjVaOg7bX+Oz4VrVu8SoczZ
+        +ga1aLZ+ocVE
+        -----END CERTIFICATE-----
+    "undercloud-ca":
+      "content": "Bag Attributes\n    localKeyID: 88 C0 79 7E 5D 72 BA A2 AE FA 34\
+        \ A8 A7 65 57 05 AA 92 E3 5C \n    friendlyName: Local Signing Authority\n\
+        subject=/CN=Local Signing Authority/CN=0c8a8d5b-8c304d53-8e398de1-f1bbb4e3\n\
+        issuer=/CN=Local Signing Authority/CN=0c8a8d5b-8c304d53-8e398de1-f1bbb4e3\n\
+        -----BEGIN CERTIFICATE-----\nMIIDjTCCAnWgAwIBAgIQDIqNW4wwTVOOOY3h8bu04zANBgkqhkiG9w0BAQsFADBQ\n\
+        MSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhvcml0eTEsMCoGA1UEAwwjMGM4\nYThkNWItOGMzMDRkNTMtOGUzOThkZTEtZjFiYmI0ZTMwHhcNMTkwNDA4MDU1MTI2\n\
+        WhcNMjAwNDA4MDU1MTI2WjBQMSAwHgYDVQQDDBdMb2NhbCBTaWduaW5nIEF1dGhv\ncml0eTEsMCoGA1UEAwwjMGM4YThkNWItOGMzMDRkNTMtOGUzOThkZTEtZjFiYmI0\n\
+        ZTMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5mvVMQO1sjv7FGsO4\nGEmxPSyb0PAErOjNxh7xBNd6iU7C8xLLxmVu5w0GnTcQkYYKnc2+2ob0s0KyhWh3\n\
+        n5N2uyeBrBz02Iw3PGmVn446s6fRK0oiv2jjV1cZ2knPoJpt0MvHO4WI6LVCNXTd\nBkLg5V5YK+dGYMFlTRD5rjDaXSXruZwGXO9kRv6+LgOoSHUsKcsnzpj5kBJnEdu+\n\
+        GqN7pxXY0hPbIGqhnrjPBXwiTEd+/35FbwNpKw2C5a6qM7FrVA57zgsyvZXl1on/\n107I1rPwAxjVdBhhFhWPzaJDwRFyUUrZdlKKJ5/Jr5t21xLXCzue7VA83AUYsp1y\n\
+        iyjTAgMBAAGjYzBhMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFFJX9P/D2Eeh\nA33Uw1cY+mUP+Ye1MB8GA1UdIwQYMBaAFFJX9P/D2EehA33Uw1cY+mUP+Ye1MA4G\n\
+        A1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEANye+tjp8JTztzobPaFgM\nT2d5Q/1lDpt52zAfwvnvwNIL0R/BJK/94fHgUdV1RgDqGxoJEgbn7F0i4ielpW4S\n\
+        qkugpUUgDKe3AnJSRly9QZ1ghvk9vm1ysCcXanaFG1NoPDbJUy9pz78s4ADZdHUB\n+EyKYExtvZfVng9dMKiLEWV5GVxI4WOaiyMhaGJ+G8zj8MjgSj16g7MKAe4ewqJU\n\
+        Z84/3TI5VQ0XjShlsf2lPAWLZ44ZlWJsoYRxyJaf7y5VHi8c9kAqaX98ZMTj1Ako\nIiWMwC0kpwySxXr6EUHQvOw1b5DCAU3WRQ/rgBt1Mnx1p98+Xeqov633iVE44qfv\n\
+        lA==\n-----END CERTIFICATE-----\n"
+  "SSLRootCertificate": |
+    The contents of your certificate go here

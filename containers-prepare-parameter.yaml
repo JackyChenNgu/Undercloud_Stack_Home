@@ -1,0 +1,13 @@
+parameter_defaults:
+  DockerInsecureRegistryAddress:
+  - 192.168.24.1:8787
+  ContainerImagePrepare:
+  - push_destination: "192.168.24.1:8787"
+    set:
+      tag: "current-tripleo-rdo"
+      namespace: "10.200.2.160:8787/tripleorocky"
+      name_prefix: "centos-binary-"
+      name_suffix: ""
+      ceph_namespace: "10.200.2.160:8787/ceph"
+      ceph_image: "daemon"
+      ceph_tag: "latest"

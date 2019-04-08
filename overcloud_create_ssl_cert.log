@@ -1,0 +1,18 @@
+2019-04-08 06:24:10 | + openssl genrsa 2048
+2019-04-08 06:24:10 | + openssl req -new -x509 -key /home/stack/overcloud-ca-privkey.pem -out /home/stack/overcloud-cacert.pem -days 365 -subj '/C=US/ST=NC/L=Raleigh/O=Red Hat/OU=OOOQ/CN=overcloud'
+2019-04-08 06:24:10 | + sudo cp /home/stack/overcloud-cacert.pem /etc/pki/ca-trust/source/anchors/
+2019-04-08 06:24:10 | + sudo update-ca-trust extract
+2019-04-08 06:24:11 | + openssl req -newkey rsa:2048 -days 365 -nodes -keyout /home/stack/server-key.pem -out /home/stack/server-req.pem -subj '/C=US/ST=NC/L=Raleigh/O=Red Hat/OU=OOOQ/CN=10.0.0.5' -reqexts subjectAltName -config /dev/fd/63
+2019-04-08 06:24:11 | ++ printf '[subjectAltName]\nsubjectAltName=IP:10.0.0.5\n[req]req_extensions = v3_req\ndistinguished_name=req_distinguished_name\n[req_distinguished_name]'
+2019-04-08 06:24:11 | Generating a 2048 bit RSA private key
+2019-04-08 06:24:11 | ................................................................................+++
+2019-04-08 06:24:11 | ................+++
+2019-04-08 06:24:11 | writing new private key to '/home/stack/server-key.pem'
+2019-04-08 06:24:11 | -----
+2019-04-08 06:24:11 | + openssl rsa -in /home/stack/server-key.pem -out /home/stack/server-key.pem
+2019-04-08 06:24:11 | writing RSA key
+2019-04-08 06:24:11 | + openssl x509 -req -in /home/stack/server-req.pem -days 365 -CA /home/stack/overcloud-cacert.pem -CAkey /home/stack/overcloud-ca-privkey.pem -set_serial 01 -out /home/stack/server-cert.pem -extensions subjectAltName -extfile /dev/fd/63
+2019-04-08 06:24:11 | ++ printf '[subjectAltName]\nsubjectAltName=IP:10.0.0.5\n[req]req_extensions = v3_req\ndistinguished_name=req_distinguished_name\n[req_distinguished_name]'
+2019-04-08 06:24:11 | Signature ok
+2019-04-08 06:24:11 | subject=/C=US/ST=NC/L=Raleigh/O=Red Hat/OU=OOOQ/CN=10.0.0.5
+2019-04-08 06:24:11 | Getting CA Private Key

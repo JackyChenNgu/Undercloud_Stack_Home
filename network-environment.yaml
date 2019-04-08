@@ -1,0 +1,24 @@
+{
+    "parameter_defaults": {
+        "ControlPlaneDefaultRoute": "192.168.24.1", 
+        "ControlPlaneSubnetCidr": "24", 
+        "DnsServers": [
+            "192.168.23.1"
+        ], 
+        "EC2MetadataIp": "192.168.24.1", 
+        "ExternalAllocationPools": [
+            {
+                "end": "10.0.0.250", 
+                "start": "10.0.0.4"
+            }
+        ], 
+        "ExternalInterfaceDefaultRoute": "10.0.0.1", 
+        "ExternalNetCidr": "10.0.0.1/24", 
+        "NeutronExternalNetworkBridge": "", 
+        "PublicVirtualFixedIPs": [
+            {
+                "ip_address": "10.0.0.5"
+            }
+        ]
+    }
+}
